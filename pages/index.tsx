@@ -1,11 +1,11 @@
 import React from "react";
-import { Navbar } from "../shared";
-// import { sty } from "./"
+import { Navbar } from "../shared/components";
+
 const Home = () => {
   return (
     <div className="bg-blue">
       <Navbar />
-      <div className="container mx-auto text-white">
+      <div className="container mx-auto text-white text-1xl font-extrabold">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quaerat,
         eligendi impedit ipsum recusandae rerum ducimus veritatis laborum
         voluptates cupiditate numquam, consequatur ipsam, est tenetur facilis id

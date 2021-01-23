@@ -1,7 +1,11 @@
+import { Navbar } from "../shared/components";
+
 export default function Work() {
   return (
     <>
-      <div>This is 404 page</div>
+      <div>
+        <Navbar></Navbar>
+      </div>
     </>
   );
 }

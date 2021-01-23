@@ -1,7 +1,7 @@
-export default function NotFound() {
+export default function Contact(): JSX.Element {
   return (
     <>
-      <div>This is 404 page</div>
+      <div>This is contact me page</div>
     </>
   );
 }
