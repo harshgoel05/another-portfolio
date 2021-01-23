@@ -5,7 +5,6 @@ import Head from 'next/head';
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   return (
     <div>
-      🔍
       <Head>
         {/* <link rel="shortcut icon" href={favicon} /> */}
         <title>Harsh Goel | Full Stack Web Developer</title>
