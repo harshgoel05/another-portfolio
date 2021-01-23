@@ -1,11 +1,11 @@
-import { Navbar } from "../shared/components";
+import { Navbar } from '../shared/components';
 
-export default function Work() {
-  return (
-    <>
-      <div>
-        <Navbar></Navbar>
-      </div>
-    </>
-  );
+export default function Work(): JSX.Element {
+    return (
+        <>
+            <div>
+                <Navbar />
+            </div>
+        </>
+    );
 }

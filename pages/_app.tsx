@@ -1,7 +1,8 @@
-import "../styles/global.css";
+import { AppProps } from 'next/dist/next-server/lib/router/router';
+import '../styles/global.css';
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+function MyApp({ Component, pageProps }: AppProps): JSX.Element {
+    return <Component {...pageProps} />;
 }
 
 export default MyApp;

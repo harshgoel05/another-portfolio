@@ -1,0 +1,53 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+        "airbnb-typescript",
+        "eslint:recommended",
+        "prettier",
+        "prettier/react",
+        "prettier/@typescript-eslint",
+        "plugin:prettier/recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "plugins": ["@typescript-eslint", "react", "prettier"],
+    "rules": {
+        "react/react-in-jsx-scope": "off",
+        "prettier/prettier": [
+            "error",
+            {
+                "endOfLine": "auto"
+            }
+        ],
+        "jsx-a11y/anchor-is-valid": [
+            "error",
+            {
+                "components": ["Link"],
+                "specialLink": ["hrefLeft", "hrefRight"],
+                "aspects": ["invalidHref", "preferButton"]
+            }
+        ],
+        "react/jsx-props-no-spreading": "off"
+    },
+    "globals": {
+        "React": "writable"
+    },
+    "parserOptions": {
+        "ecmaVersion": 2020,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "project": "./tsconfig.json"
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
+    "env": {
+        "browser": true,
+        "amd": true,
+        "node": true
+    }
+}
