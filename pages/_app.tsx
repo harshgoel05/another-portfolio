@@ -1,8 +1,33 @@
 import { AppProps } from 'next/dist/next-server/lib/router/router';
 import '../styles/global.css';
 import Head from 'next/head';
+import Router from 'next/router';
+import { useEffect, useState } from 'react';
+import Loader from '../shared/components/loader';
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setLoading(false);
+    const handleStart = (url) => url !== Router.asPath && setLoading(true);
+
+    const handleComplete = (url) => url !== Router.asPath && setLoading(false);
+
+    Router.events.on('routeChangeStart', handleStart);
+    Router.events.on('routeChangeComplete', handleComplete);
+    Router.events.on('routeChangeError', handleComplete);
+
+    return () => {
+      Router.events.off('routeChangeStart', handleStart);
+      Router.events.off('routeChangeComplete', handleComplete);
+      Router.events.off('routeChangeError', handleComplete);
+    };
+  });
+  if (loading) {
+    return <Loader />;
+  }
+
   return (
     <div>
       <Head>

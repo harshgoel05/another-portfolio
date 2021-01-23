@@ -26,6 +26,15 @@ module.exports = {
         pink: '#EEBBC3',
         violet: '#B8C1EC',
         white: '#FFFFFE'
+      },
+      animation: {
+        chnagewidth: 'width 2s ease-in-out infinite'
+      },
+      keyframes: {
+        width: {
+          '0%, 100%': { width: '20px' },
+          '50%': { width: '40%' }
+        }
       }
     }
   },

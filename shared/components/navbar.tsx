@@ -1,18 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Menu } from 'react-feather';
 
 const Navbar = (): JSX.Element => {
   // const router = useRouter();
-  const [showMobileNav, setShowMobileNav] = useState(true);
-
-  useEffect(() => {
-    const size = window.innerWidth;
-    if (size < 1000) {
-      setShowMobileNav(false);
-    }
-  }, []);
+  const [showMobileNav, setShowMobileNav] = useState(false);
 
   const router = useRouter();
   return (
