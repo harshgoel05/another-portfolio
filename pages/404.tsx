@@ -1,7 +1,10 @@
+import { Navbar } from '../shared/components';
+
 export default function NotFound(): JSX.Element {
   return (
     <>
-      <div>This is contact me page</div>
+      <Navbar />
+      <div>This is 404 page</div>
     </>
   );
 }
