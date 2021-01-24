@@ -1,10 +1,5 @@
-import { Navbar } from '../shared/components';
+import { NotFoundPage } from '@components';
 
 export default function NotFound(): JSX.Element {
-  return (
-    <>
-      <Navbar />
-      <div>This is 404 page</div>
-    </>
-  );
+  return <NotFoundPage />;
 }
