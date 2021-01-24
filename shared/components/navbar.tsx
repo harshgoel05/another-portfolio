@@ -4,7 +4,6 @@ import { useRouter } from 'next/router';
 import { Menu } from 'react-feather';
 
 const Navbar = (): JSX.Element => {
-  // const router = useRouter();
   const [showMobileNav, setShowMobileNav] = useState(false);
 
   const router = useRouter();
@@ -25,13 +24,13 @@ const Navbar = (): JSX.Element => {
           <div className="flex md:hidden mr-6">
             <button
               type="button"
-              className="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400"
+              className="text-white focus:outline-none"
               onClick={() => setShowMobileNav(!showMobileNav)}>
               <Menu size={16} />
             </button>
           </div>
         </div>
-        <div className={showMobileNav ? 'block' : 'hidden md:block'}>
+        <div className={showMobileNav ? 'block pt-3' : 'hidden md:block '}>
           {/* Navbar Items */}
           <ul className="md:flex md:flex-row pr-10 text-white font-bold ">
             <li

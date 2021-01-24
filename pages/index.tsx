@@ -1,12 +1,14 @@
 import React from 'react';
 import { Navbar } from '../shared/components';
+import SocialBar from '../shared/components/socialbar';
 
 const Home = (): JSX.Element => {
   return (
     <>
       <Navbar />
-      <div className="bg-blue w-full">
-        <div className="container text-white">
+      <SocialBar />
+      <div className="container bg-blue pt-28">
+        <div className="text-white mx-12 md:mx-20 text-justify">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quaerat, eligendi impedit
           ipsum recusandae rerum ducimus veritatis laborum voluptates cupiditate numquam,
           consequatur ipsam, est tenetur facilis id magnam optio sed. Lorem ipsum dolor sit amet
