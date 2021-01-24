@@ -17,7 +17,7 @@ const Navbar = (): JSX.Element => {
               <img
                 src="/images/logo-light.svg"
                 alt="e"
-                className="pl-30 my-2 cursor-pointer  w-1/5 md:w-2/5"
+                className="pl-30 my-2 cursor-pointer w-1/5 md:w-2/5 transition-all transform hover:scale-75"
               />
             </Link>
           </div>
