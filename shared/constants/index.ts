@@ -1,4 +1,4 @@
 import SocialMedia from './socialmedia';
+import NavLinks from './navlinks';
 
-// eslint-disable-next-line import/prefer-default-export
-export { SocialMedia };
+export { SocialMedia, NavLinks };

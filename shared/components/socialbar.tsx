@@ -8,11 +8,11 @@ interface Props {
 
 function SocialIcon({ alt_text, image_file, link }: Props): JSX.Element {
   return (
-    <a href={link} className="">
+    <a href={link}>
       <img
         src={`/images/icons/${image_file}.svg`}
         alt={alt_text}
-        className="w-6 md:w-8 mb-2 md:my-2 transition-all transform hover:translate-x-4"
+        className="w-6 md:w-8 mb-2 md:my-2 transition-all hover:opacity-40 transform hover:scale-75"
       />
     </a>
   );
@@ -21,7 +21,7 @@ function SocialIcon({ alt_text, image_file, link }: Props): JSX.Element {
 export default function SocialBar(): JSX.Element {
   return (
     <div className="fixed left-3 md:left-5 bottom-0">
-      <div className="flex flex-col justify-center items-center ">
+      <div className="flex flex-col  justify-center items-center ">
         {SocialMedia.map((item) => {
           return (
             <SocialIcon
