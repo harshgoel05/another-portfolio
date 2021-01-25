@@ -8,7 +8,7 @@ const Navbar = (): JSX.Element => {
 
   const router = useRouter();
   return (
-    <div className="container mx-auto bg-blue w-full fixed">
+    <div className="mx-auto bg-blue w-full fixed">
       <nav className="block md:flex justify-between items-center p-2 pl-5">
         {/* Navbar Logo */}
         <div className="flex justify-between">
@@ -26,13 +26,13 @@ const Navbar = (): JSX.Element => {
               type="button"
               className="text-white focus:outline-none"
               onClick={() => setShowMobileNav(!showMobileNav)}>
-              <Menu size={16} />
+              <Menu size={18} />
             </button>
           </div>
         </div>
-        <div className={showMobileNav ? 'block pt-3' : 'hidden md:block '}>
+        <div className={showMobileNav ? 'block pt-3 transition-all' : 'hidden md:block '}>
           {/* Navbar Items */}
-          <ul className="md:flex md:flex-row pr-10 text-white font-bold ">
+          <ul className="md:flex md:flex-row pr-10 text-white font-bold border-pink border-2 md:border-none">
             <li
               className={`${
                 router.pathname === '/explore' ? 'border-b-2' : ''
