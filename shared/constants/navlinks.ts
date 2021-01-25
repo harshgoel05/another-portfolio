@@ -1,5 +1,9 @@
 const NavLinks = [
   {
+    title: 'Home',
+    href: '/'
+  },
+  {
     title: 'Explore',
     href: '/explore'
   },

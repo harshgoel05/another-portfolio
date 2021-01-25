@@ -5,13 +5,13 @@ export default function Landing(): JSX.Element {
     <>
       <img
         src="/images/vectors/ellipse.svg"
-        alt=""
-        className="absolute right-0 bottom-0 w-2/3 md:w-50p lg:w-35p"
+        alt="Ellipse Vector"
+        className="absolute right-0 bottom-0 w-2/3 md:w-50p lg:w-35p pointer-events-none"
       />
       <img
         src="/images/vectors/triangle.svg"
-        alt=""
-        className="block md:hidden absolute right-1/3 top-16 w-1/4 md:w-16 animate-spin duration-2000"
+        alt="Triangle 3d Vector"
+        className="block md:hidden absolute right-1/3 top-16 w-1/4 md:w-16 animate-spin pointer-events-none"
       />
       <div className="grid grid-cols-12 gap-4 h-84.5vh">
         <div className="col-span-12 md:col-span-8 lg:col-span-6 flex flex-col justify-center items-center">
@@ -19,7 +19,7 @@ export default function Landing(): JSX.Element {
           <div className="items-center w-3/4 -mt-10 relative">
             <img
               src="/images/vectors/triangle.svg"
-              alt=""
+              alt="Triangle 3d Vector"
               className="hidden md:block absolute right-0 top-0 w-2/3 md:w-16 animate-spin duration-2000"
             />
             <HeaderSmall text="Who is he?" />
@@ -41,8 +41,12 @@ export default function Landing(): JSX.Element {
             </div>
           </div>
         </div>
-        <div className="hidden md:flex md:col-span-4 lg:col-span-6 text-justify text-white justify-end items-end">
-          <img src="/images/picture.svg" alt="Harsh" className="md:w-80 lg:w-1/2" />
+        <div className="hidden md:flex md:col-span-4 lg:col-span-6 text-justify text-white justify-end items-end ">
+          <img
+            src="/images/picture.svg"
+            alt="Harsh Goel Profile Img"
+            className="md:w-80 lg:w-1/2 pointer-events-none"
+          />
         </div>
       </div>
     </>
