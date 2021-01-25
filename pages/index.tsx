@@ -1,6 +1,6 @@
 import { HomePage } from '@components';
 import React from 'react';
-import { Navbar, SocialBar } from '../shared/components';
+import { Footer, Navbar, SocialBar } from '@shared-components';
 
 const Home = (): JSX.Element => {
   return (
@@ -8,6 +8,7 @@ const Home = (): JSX.Element => {
       <Navbar />
       <SocialBar />
       <HomePage />
+      <Footer />
     </>
   );
 };
