@@ -43,7 +43,8 @@ module.exports = {
       },
       animation: {
         changewidth: 'width 2s ease-in-out infinite',
-        spin: 'spin 8s ease-in-out infinite'
+        spin: 'spin 8s linear infinite',
+        absoluteright: 'absoluteright 4s ease-in infinite'
       },
       keyframes: {
         width: {
@@ -59,6 +60,14 @@ module.exports = {
           },
           '100%': {
             transform: 'rotateY(`360deg`)'
+          }
+        },
+        absoluteright: {
+          '0%,100%': {
+            right: '0px'
+          },
+          '50%': {
+            right: '-30px'
           }
         }
       }

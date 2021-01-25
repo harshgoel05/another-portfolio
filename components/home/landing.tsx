@@ -11,7 +11,7 @@ export default function Landing(): JSX.Element {
       <img
         src="/images/vectors/triangle.svg"
         alt="Triangle 3d Vector"
-        className="block md:hidden absolute right-1/3 top-16 w-1/4 md:w-16 animate-spin pointer-events-none"
+        className="block md:hidden absolute right-1/3 top-28 w-1/4 md:w-16 animate-spin pointer-events-none"
       />
       <div className="grid grid-cols-12 gap-4 h-84.5vh ml-4 sm:mx-12 md:mx-16">
         <div className="col-span-12 md:col-span-8 lg:col-span-6 flex flex-col justify-center items-center">
