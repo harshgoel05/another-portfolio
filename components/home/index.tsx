@@ -1,11 +1,8 @@
-import { Navbar, SocialBar } from '@shared-components';
 import Landing from './landing';
 
 const HomePage = (): JSX.Element => {
   return (
     <>
-      <Navbar />
-      <SocialBar />
       <div className=" bg-blue pt-28">
         <div className="ml-12 mr-4 sm:mx-12 md:mx-16">
           <Landing />
