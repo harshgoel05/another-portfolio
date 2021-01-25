@@ -32,9 +32,6 @@ export default function Skills(): JSX.Element {
             <SkillsIcons />
           </div>
         </div>
-        <div className="col-span-12 md:col-span-5 lg:col-span-6 flex flex-col justify-center items-center my-10 sm:mt-0">
-          <SkillsIcons />
-        </div>
       </div>
     </>
   );
