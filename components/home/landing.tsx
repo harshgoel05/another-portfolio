@@ -20,7 +20,7 @@ export default function Landing(): JSX.Element {
             <img
               src="/images/vectors/triangle.svg"
               alt="Triangle 3d Vector"
-              className="hidden md:block absolute right-0 top-0 w-2/3 md:w-16 animate-spin duration-2000"
+              className="hidden md:block absolute right-0 top-0 w-2/3 md:w-16 animate-spin"
             />
             <HeaderSmall text="Who is he?" />
             <h1 className="text-3xl sm:text-2xl xl:text-1xl font-extrabold text-white leading-none mb-3">

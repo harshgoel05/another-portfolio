@@ -44,23 +44,13 @@ module.exports = {
       animation: {
         changewidth: 'width 2s ease-in-out infinite',
         spin: 'spin 8s linear infinite',
-        absoluteright: 'absoluteright 4s ease-in infinite'
+        absoluteright: 'absoluteright 4s ease-in infinite',
+        translateright: 'translateright 1.5s ease-in-out infinite'
       },
       keyframes: {
         width: {
           '0%, 100%': { width: '20px' },
           '50%': { width: '40%' }
-        },
-        spin: {
-          '0%,100%': {
-            transform: 'rotateY(`0deg`)'
-          },
-          '50%': {
-            transform: 'rotateY(`180deg`)'
-          },
-          '100%': {
-            transform: 'rotateY(`360deg`)'
-          }
         },
         absoluteright: {
           '0%,100%': {
@@ -68,6 +58,14 @@ module.exports = {
           },
           '50%': {
             right: '-30px'
+          }
+        },
+        translateright: {
+          '0%,100%': {
+            'margin-left': '0px'
+          },
+          '50%': {
+            'margin-left': '20px'
           }
         }
       }

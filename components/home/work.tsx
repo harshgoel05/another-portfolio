@@ -1,0 +1,52 @@
+import { HeaderSmall } from '@shared-components';
+import Link from 'next/link';
+
+export default function Work(): JSX.Element {
+  return (
+    <>
+      <div className="relative h-auto sm:h-auto md:h-90vh">
+        <img
+          src="/images/vectors/circle-spin.svg"
+          alt="Circle Vector"
+          className="absolute -right-50p md:-right-96 -bottom-0 pointer-events-none animate-spin"
+        />
+        <div className="ml-4 sm:mx-12 md:mx-16 grid grid-cols-12 gap-4 lg:h-90vh place-items-center items-center">
+          <div className="col-span-12 md:col-span-7 lg:col-span-6 flex flex-col justify-center items-center">
+            {/* Hero Header */}
+            <div className="items-center w-3/4 relative">
+              <img
+                src="/images/vectors/boxes.svg"
+                alt="Box Vector"
+                className="block absolute right-0 top-0 w-20 md:w-16 lg:w-52 opacity-60"
+              />
+              <HeaderSmall text="What does he do?" />
+              <h1 className="w-4/5 mb-3 mt-1 text-7xl sm:text-5xl md:text-7xl lg:text-4xl font-normal tracking-wide text-white leading-normal">
+                Currently building things at <span className="text-pink font-bold">SRMKZILLA</span>{' '}
+                as
+              </h1>
+              <h1 className="mb-3 mt-6 text-4xl sm:text-2xl md:text-3xl lg:text-2xl xl:text-1xl font-extrabold text-white leading-none ">
+                Technical Lead
+              </h1>
+              <div className="sm:ml-52 xl:ml-96">
+                <Link href="/work">
+                  <img
+                    src="/images/vectors/arrows-right.svg"
+                    alt="Next"
+                    className="w-14 cursor-pointer mt-10 sm:mt-0 transform-all animate-translateright"
+                  />
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div className="col-span-12 md:col-span-5 lg:col-span-6 flex flex-col items-center justify-center">
+            <img
+              src="/images/srmkzilla_logo_white_mono.png"
+              alt="SRMKZILLA"
+              className="w-full p-24 md:p-4 lg:p-24"
+            />
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
