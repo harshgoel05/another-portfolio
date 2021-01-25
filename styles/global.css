@@ -37,4 +37,14 @@ a {
   background: #525f9e;
 }
 
+::-moz-selection {
+  color: #232946;
+  background: #b8c1ec;
+}
+
+::selection {
+  color: #232946;
+  background: #b8c1ec;
+}
+
 @tailwind utilities;

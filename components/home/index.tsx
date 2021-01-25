@@ -1,4 +1,5 @@
 import Landing from './landing';
+import Skills from './skills';
 
 const HomePage = (): JSX.Element => {
   return (
@@ -6,6 +7,7 @@ const HomePage = (): JSX.Element => {
       <div className=" bg-blue pt-28">
         <div className="ml-12 mr-4 sm:mx-12 md:mx-16">
           <Landing />
+          <Skills />
           <div className="col-span-3 text-justify text-white">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quaerat, eligendi impedit
             ipsum recusandae rerum ducimus veritatis laborum voluptates cupiditate numquam,
