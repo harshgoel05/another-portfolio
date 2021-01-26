@@ -3,12 +3,33 @@ import '../styles/global.css';
 import Head from 'next/head';
 import Router from 'next/router';
 import { useEffect, useState } from 'react';
+import { AnimatePresence, AnimateSharedLayout, motion } from 'framer-motion';
 import Loader from '../shared/components/loader';
 
-function MyApp({ Component, pageProps }: AppProps): JSX.Element {
+function MyApp({ Component, pageProps, router }: AppProps): JSX.Element {
   const [loading, setLoading] = useState(true);
+  const handExitComplete = (): void => {
+    if (typeof window !== 'undefined') {
+      // Get the hash from the url
+      const hashId = window.location.hash;
 
+      if (hashId) {
+        // Use the hash to find the first element with that id
+        const element = document.querySelector(hashId);
+
+        if (element) {
+          // Smooth scroll to that elment
+          element.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+            inline: 'nearest'
+          });
+        }
+      }
+    }
+  };
   useEffect(() => {
+    window.scrollTo(0, 0);
     setLoading(false);
     const handleStart = (url) => url !== Router.asPath && setLoading(true);
 
@@ -24,6 +45,12 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
       Router.events.off('routeChangeError', handleComplete);
     };
   });
+  const spring = {
+    type: 'spring',
+    damping: 20,
+    stiffness: 100,
+    when: 'afterChildren'
+  };
   if (loading) {
     return <Loader />;
   }
@@ -80,7 +107,19 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
-      <Component {...pageProps} />
+      <AnimatePresence>
+        <div className="page-transition-wrapper">
+          <motion.div
+            transition={spring}
+            key={router.pathname}
+            initial={{ x: 300, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: -300, opacity: 0 }}
+            id="page-transition-container">
+            <Component {...pageProps} key={router.pathname} />
+          </motion.div>
+        </div>
+      </AnimatePresence>
     </div>
   );
 }
