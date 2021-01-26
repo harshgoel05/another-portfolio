@@ -89,7 +89,7 @@ function MyApp({ Component, pageProps, router }: AppProps): JSX.Element {
         <meta name="theme-color" content="#ffffff" />
       </Head>
       <AnimatePresence>
-        <div className="page-transition-wrapper">
+        <div className="page-transition-wrapper overflow-x-hidden">
           <motion.div
             transition={spring}
             key={router.pathname}
