@@ -65,5 +65,8 @@ a {
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
 }
+.filter-grayscale {
+  filter: grayscale(100%);
+}
 
 @tailwind utilities;

@@ -39,16 +39,15 @@ function MyApp({ Component, pageProps, router }: AppProps): JSX.Element {
   return (
     <div>
       <Head>
-        {/* <link rel="shortcut icon" href={favicon} /> */}
-        <title>Harsh Goel | Full Stack Web Developer</title>
-        <meta name="title" content="Harsh Goel | Full Stack Web Developer" />
+        <title>Harsh Goel | Software Developer</title>
+        <meta name="title" content="Harsh Goel | Software Developer" />
         <meta
           name="description"
-          content="Harsh Goel is a full-stack developer from Dhanbad, Jharkhand. Harsh is pursuing his undergraduate from SRM University, Chennai."
+          content="Harsh Goel is a Software Developer from Dhanbad, Jharkhand. Harsh is pursuing his undergraduate from SRM University, Chennai."
         />
         <meta
           name="keywords"
-          content="Harsh Goel, Full Stack Developer , Web Development Freelancer, SRM University, Web Developer , Freelancer"
+          content="Harsh Goel, Software Developer , Web Development Freelancer, SRM University, Web Developer"
         />
         <meta name="robots" content="index, follow" />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
@@ -60,20 +59,20 @@ function MyApp({ Component, pageProps, router }: AppProps): JSX.Element {
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://harshgoel.me/" />
-        <meta property="og:title" content="Harsh Goel | Full Stack Web Developer" />
+        <meta property="og:title" content="Harsh Goel | Software Developer" />
         <meta
           property="og:description"
-          content="Harsh Goel is a full-stack developer from Dhanbad, Jharkhand. Harsh is pursuing his undergraduate from SRM University, Chennai."
+          content="Harsh Goel is a Software Developer from Dhanbad, Jharkhand. Harsh is pursuing his undergraduate from SRM University, Chennai."
         />
         <meta property="og:image" content="./src/img/harsh-banner.png" />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://harshgoel.me/" />
-        <meta property="twitter:title" content="Harsh Goel | Full Stack Web Developer" />
+        <meta property="twitter:title" content="Harsh Goel | Software Developer" />
         <meta
           property="twitter:description"
-          content="Harsh Goel is a full-stack developer from Dhanbad, Jharkhand. Harsh is pursuing his undergraduate from SRM University, Chennai."
+          content="Harsh Goel is a Software Developer from Dhanbad, Jharkhand. Harsh is pursuing his undergraduate from SRM University, Chennai."
         />
         {/* Use Billboard to get an OG Image */}
         <meta
@@ -89,7 +88,7 @@ function MyApp({ Component, pageProps, router }: AppProps): JSX.Element {
         <meta name="theme-color" content="#ffffff" />
       </Head>
       <AnimatePresence>
-        <div className="page-transition-wrapper">
+        <div className="page-transition-wrapper overflow-x-hidden min-h-screen">
           <motion.div
             transition={spring}
             key={router.pathname}
