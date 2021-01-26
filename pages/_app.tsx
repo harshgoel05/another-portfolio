@@ -3,31 +3,12 @@ import '../styles/global.css';
 import Head from 'next/head';
 import Router from 'next/router';
 import { useEffect, useState } from 'react';
-import { AnimatePresence, AnimateSharedLayout, motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import Loader from '../shared/components/loader';
 
 function MyApp({ Component, pageProps, router }: AppProps): JSX.Element {
   const [loading, setLoading] = useState(true);
-  const handExitComplete = (): void => {
-    if (typeof window !== 'undefined') {
-      // Get the hash from the url
-      const hashId = window.location.hash;
 
-      if (hashId) {
-        // Use the hash to find the first element with that id
-        const element = document.querySelector(hashId);
-
-        if (element) {
-          // Smooth scroll to that elment
-          element.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start',
-            inline: 'nearest'
-          });
-        }
-      }
-    }
-  };
   useEffect(() => {
     window.scrollTo(0, 0);
     setLoading(false);
