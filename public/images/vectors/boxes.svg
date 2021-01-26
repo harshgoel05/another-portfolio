@@ -1,10 +1,1 @@
-<svg width="232" height="95" viewBox="0 0 232 95" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M36.0126 1H1V36.0126H36.0126V1Z" stroke="#B8C1EC" stroke-opacity="0.19" stroke-width="2" stroke-miterlimit="10"/>
-<path d="M100.756 1H65.7431V36.0126H100.756V1Z" stroke="#B8C1EC" stroke-opacity="0.19" stroke-width="2" stroke-miterlimit="10"/>
-<path d="M165.499 1H130.486V36.0126H165.499V1Z" stroke="#B8C1EC" stroke-opacity="0.19" stroke-width="2" stroke-miterlimit="10"/>
-<path d="M230.271 1H195.258V36.0126H230.271V1Z" stroke="#B8C1EC" stroke-opacity="0.19" stroke-width="2" stroke-miterlimit="10"/>
-<path d="M36.0126 58.1229H1V93.1356H36.0126V58.1229Z" stroke="#B8C1EC" stroke-opacity="0.19" stroke-width="2" stroke-miterlimit="10"/>
-<path d="M100.756 58.1229H65.7431V93.1356H100.756V58.1229Z" stroke="#B8C1EC" stroke-opacity="0.19" stroke-width="2" stroke-miterlimit="10"/>
-<path d="M165.499 58.1229H130.486V93.1356H165.499V58.1229Z" stroke="#B8C1EC" stroke-opacity="0.19" stroke-width="2" stroke-miterlimit="10"/>
-<path d="M230.271 58.1229H195.258V93.1356H230.271V58.1229Z" stroke="#B8C1EC" stroke-opacity="0.19" stroke-width="2" stroke-miterlimit="10"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="232" height="95" fill="none" viewBox="0 0 232 95"><path stroke="#B8C1EC" stroke-miterlimit="10" stroke-opacity=".19" stroke-width="2" d="M36.0126 1H1V36.0126H36.0126V1Z"/><path stroke="#B8C1EC" stroke-miterlimit="10" stroke-opacity=".19" stroke-width="2" d="M100.756 1H65.7431V36.0126H100.756V1Z"/><path stroke="#B8C1EC" stroke-miterlimit="10" stroke-opacity=".19" stroke-width="2" d="M165.499 1H130.486V36.0126H165.499V1Z"/><path stroke="#B8C1EC" stroke-miterlimit="10" stroke-opacity=".19" stroke-width="2" d="M230.271 1H195.258V36.0126H230.271V1Z"/><path stroke="#B8C1EC" stroke-miterlimit="10" stroke-opacity=".19" stroke-width="2" d="M36.0126 58.1229H1V93.1356H36.0126V58.1229Z"/><path stroke="#B8C1EC" stroke-miterlimit="10" stroke-opacity=".19" stroke-width="2" d="M100.756 58.1229H65.7431V93.1356H100.756V58.1229Z"/><path stroke="#B8C1EC" stroke-miterlimit="10" stroke-opacity=".19" stroke-width="2" d="M165.499 58.1229H130.486V93.1356H165.499V58.1229Z"/><path stroke="#B8C1EC" stroke-miterlimit="10" stroke-opacity=".19" stroke-width="2" d="M230.271 58.1229H195.258V93.1356H230.271V58.1229Z"/></svg>
