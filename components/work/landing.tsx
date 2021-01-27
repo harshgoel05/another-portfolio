@@ -1,11 +1,11 @@
 import { HeaderSmall } from '@shared-components';
-import Image from 'next/image';
+import Details from './details';
 import WorkLogos from './work-logos';
 
 export default function Landing(): JSX.Element {
   return (
     <>
-      <div className="relative py-10 lg:py-20 h-90vh" id="skills">
+      <div className="relative py-10 lg:py-20">
         <img
           src="/images/vectors/cylinder.svg"
           alt="Cylinder Vector"
@@ -30,59 +30,10 @@ export default function Landing(): JSX.Element {
             </div>
           </div>
           <div className="col-span-12 md:col-span-5 lg:col-span-6 grid grid-cols-3 gap-4 lg:gap-14 my-10 sm:mt-0">
-            <Image
-              src="/images/companies/coding_blocks.svg"
-              alt="Coding Blocks"
-              width={80}
-              height={80}
-              layout="responsive"
-            />
-            <Image
-              src="/images/companies/workmailcommunity.svg"
-              alt="Work Mail Community"
-              width={80}
-              height={80}
-              layout="responsive"
-            />
-            <Image
-              src="/images/companies/hashbinary.svg"
-              alt="Hashbinary LLP"
-              width={80}
-              height={80}
-              layout="responsive"
-            />
-            <Image src="/images/companies/zoob_labs.svg" alt="Zoob Labs" width={80} height={80} />
-            <Image
-              src="/images/companies/inception_wave.svg"
-              alt="Inception Wave"
-              width={80}
-              height={80}
-              layout="responsive"
-            />
-            <Image src="/images/companies/aaruush.svg" alt="Aaruush'18" width={80} height={80} />
-            <Image
-              src="/images/companies/iec.svg"
-              alt="SRM Indian Energy Conference"
-              width={80}
-              height={80}
-              layout="responsive"
-            />
-            <Image
-              src="/images/companies/social_dukan.svg"
-              alt="Social Dukan"
-              width={80}
-              height={80}
-              layout="responsive"
-            />
-            <Image
-              src="/images/companies/dezigndia.png"
-              alt="Social Dukan"
-              width={80}
-              height={80}
-              layout="responsive"
-            />
+            <WorkLogos />
           </div>
         </div>
+        <Details />
       </div>
     </>
   );

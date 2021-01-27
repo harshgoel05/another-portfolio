@@ -1,5 +1,6 @@
 // ml-4 sm:mx-12 md:mx-16
 
+import { SocialBar } from '@shared-components';
 import Landing from './landing';
 
 const WorkPage = (): JSX.Element => {
@@ -10,6 +11,7 @@ const WorkPage = (): JSX.Element => {
           <Landing />
         </div>
       </div>
+      <SocialBar />
     </>
   );
 };
