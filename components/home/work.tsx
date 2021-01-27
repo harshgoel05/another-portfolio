@@ -4,13 +4,13 @@ import Link from 'next/link';
 export default function Work(): JSX.Element {
   return (
     <>
-      <div className="relative h-auto sm:h-auto md:h-90vh">
+      <div className="relative h-auto  py-10 lg:py-20">
         <img
           src="/images/vectors/circle-spin.svg"
           alt="Circle Vector"
           className="absolute -right-16 md:-right-64 top-52  md:top-0 lg:bottom-36 w-1/3 2xl:w-1/3 pointer-events-none animate-spin"
         />
-        <div className="ml-4 sm:mx-12 md:mx-16 grid grid-cols-12 gap-4 lg:h-90vh place-items-center items-center">
+        <div className="ml-4 sm:mx-12 md:mx-16 grid grid-cols-12 gap-4 h-auto place-items-center items-center">
           <div className="col-span-12 md:col-span-7 lg:col-span-6 flex flex-col justify-center items-center">
             {/* Hero Header */}
             <div className="items-center w-3/4 relative">
@@ -42,7 +42,7 @@ export default function Work(): JSX.Element {
             <img
               src="/images/srmkzilla_logo_white_mono.png"
               alt="SRMKZILLA"
-              className="w-full p-24 md:p-4 lg:p-24"
+              className="w-full p-10 sm:p-24 md:p-4 lg:p-24"
             />
           </div>
         </div>
