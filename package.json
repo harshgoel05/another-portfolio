@@ -14,7 +14,7 @@
     "export": "next export",
     "lint": "eslint --fix .",
     "format": "prettier --write ./**/*.{js,jsx,ts,tsx,css,md,json} --config ./.prettierrc --ignore-path .gitignore",
-    "check-format": "prettier --check . --ignore-path .gitignore"
+    "check-format": ". --ignore-path .gitignore"
   },
   "dependencies": {
     "autoprefixer": "^10.2.1",
