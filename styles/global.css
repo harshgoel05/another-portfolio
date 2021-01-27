@@ -8,6 +8,10 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Poppins', sans-serif;
+  cursor: url('/images/cursor.svg'), auto;
+}
+*:hover {
+  cursor: url('/images/cursor.svg'), auto;
 }
 
 a {

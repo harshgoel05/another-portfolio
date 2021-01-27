@@ -1,7 +1,9 @@
 import { Project, Projects } from '@constants';
 import { Button } from '@shared-components';
+import { useRouter } from 'next/router';
 
 export default function ProjectsCards(): JSX.Element {
+  const router = useRouter();
   return (
     <>
       <div className="relative h-auto sm:h-auto md:h-auto ml-4 sm:mx-12 md:mx-16">
@@ -22,7 +24,11 @@ export default function ProjectsCards(): JSX.Element {
           )}
         </div>
         <div className="flex justify-center mt-4">
-          <Button type="solid" text="Show me more! 🔥" />
+          <Button
+            type="solid"
+            text="Show me more! 🔥"
+            onClickHandler={() => router.push('/projects')}
+          />
         </div>
       </div>
     </>

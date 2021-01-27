@@ -9,9 +9,9 @@ export default function Projects(): JSX.Element {
       <div>
         <div className="relative h-auto sm:h-auto md:h-90vh">
           <img
-            src="/images/vectors/circle-spin.svg"
+            src="/images/vectors/heart.svg"
             alt="Circle Vector"
-            className="absolute -right-50p md:-right-96 bottom-52 md:-bottom-0 pointer-events-none animate-spin"
+            className="absolute -right-50p md:-right-96 bottom-16 md:-bottom-20 pointer-events-none animate-pulse"
           />
           <div className="ml-4 sm:mx-12 md:mx-16 grid grid-cols-12 gap-4 lg:h-90vh place-items-center items-center">
             <div className="col-span-12 md:col-span-7 lg:col-span-6 flex flex-col justify-center items-center">
