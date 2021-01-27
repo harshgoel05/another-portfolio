@@ -17,7 +17,7 @@ const NavLinks = [
   },
   {
     title: 'Contact',
-    href: '/contact'
+    href: '/connect'
   }
 ];
 export default NavLinks;

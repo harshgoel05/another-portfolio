@@ -37,7 +37,7 @@ export default function Contact(): JSX.Element {
           <Button
             type="solid"
             text="Let's Connect! 🚀 "
-            onClickHandler={() => router.push('/projects')}
+            onClickHandler={() => router.push('/connect')}
           />
         </div>
       </div>
