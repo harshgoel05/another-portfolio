@@ -1,5 +1,7 @@
+import { RESUME_URL } from '@constants';
 import { Button, HeaderSmall } from '@shared-components';
 import { motion } from 'framer-motion';
+import { useRouter } from 'next/router';
 
 export default function Landing(): JSX.Element {
   const config = {
@@ -7,6 +9,7 @@ export default function Landing(): JSX.Element {
     damping: 10,
     stiffness: 80
   };
+  const router = useRouter();
   return (
     <>
       <img
@@ -45,10 +48,18 @@ export default function Landing(): JSX.Element {
               </h5>
               <div className="grid sm:grid-cols-2 md:grid-cols-none xl:grid-cols-2 gap-4 mt-6">
                 <div className="sm:col-span-1 xl:col-span-1">
-                  <Button type="solid" text="Know More" />
+                  <Button
+                    type="solid"
+                    text="Know More"
+                    onClickHandler={() => router.push('#skills')}
+                  />
                 </div>
                 <div className="sm:col-span-1 xl:col-span-1">
-                  <Button type="outlined" text="Download Resume" />
+                  <Button
+                    type="outlined"
+                    text="Download Resume"
+                    onClickHandler={() => window.open(RESUME_URL, '_blank')}
+                  />
                 </div>
               </div>
             </div>

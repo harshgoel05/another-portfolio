@@ -6,7 +6,7 @@ export default function ProjectsCards(): JSX.Element {
   const router = useRouter();
   return (
     <>
-      <div className="relative h-auto sm:h-auto md:h-auto ml-4 sm:mx-12 md:mx-16">
+      <div className="relative h-auto sm:h-auto md:h-auto ml-4 sm:mx-12 md:mx-16" id="projects">
         <div className="sm:flex sm:flex-wrap justify-center items-center ">
           {Projects.map(
             (project: Project) =>

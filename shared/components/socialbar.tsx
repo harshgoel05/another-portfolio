@@ -20,7 +20,7 @@ function SocialIcon({ alt_text, image_file, link }: Props): JSX.Element {
 
 export default function SocialBar(): JSX.Element {
   return (
-    <div className="fixed left-3 md:left-5 bottom-0">
+    <div className="fixed left-3 md:left-5 bottom-0 z-50">
       <div className="flex flex-col  justify-center items-center ">
         {SocialMedia.map((item) => {
           return (

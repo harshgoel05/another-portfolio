@@ -16,8 +16,8 @@ const NavItem = ({ href, title }: Props): JSX.Element => {
       <li
         className={`${
           router.pathname === href ? 'border-b-2 md:border-none' : ''
-        } px-5 py-2 pt-1 cursor-pointer md:pt-4`}>
-        <p className="cursor-pointer transition duration-500 ease-in-out transform md:hover:-translate-y-2 text-white font-bold md:hover:text-violet">
+        } px-5 py-2 pt-1 md:pt-4`}>
+        <p className="transition duration-500 ease-in-out transform md:hover:-translate-y-2 text-white font-bold md:hover:text-violet">
           {title}
         </p>
         <img
@@ -60,7 +60,7 @@ const Navbar = (): JSX.Element => {
                 alt="e"
                 className={`${
                   isScreenScrolled ? 'w-1/5 md:w-3/12' : 'w-16 md:w-2/5'
-                } pl-30 my-2 cursor-pointer transition-all transform hover:scale-75`}
+                } pl-30 my-2 transition-all transform hover:scale-75`}
               />
             </Link>
           </div>
