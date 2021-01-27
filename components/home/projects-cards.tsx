@@ -13,7 +13,7 @@ export default function ProjectsCards(): JSX.Element {
               project.featured && (
                 <div
                   key={project.name}
-                  className="flex flex-shrink-0 m-16 sm:m-10 sm:w-1/3 my-3 md:m-10 lg:mx-14 lg:my-6 
+                  className="flex flex-shrink-0 m-10 sm:m-10 sm:w-1/3 my-3 md:m-10 lg:mx-14 lg:my-6 
               rounded-2xl flex-grow-0 justify-center items-center 
               transition-all duration-300 transform hover:opacity-80 hover:scale-110 hover:shadow-violet-5xl">
                   <a href={project?.url} className="flex flex-1 justify-center items-center">
@@ -23,7 +23,7 @@ export default function ProjectsCards(): JSX.Element {
               )
           )}
         </div>
-        <div className="flex justify-center mt-4">
+        <div className="flex justify-center mt-10 lg:mt-4">
           <Button
             type="solid"
             text="Show me more! 🔥"
