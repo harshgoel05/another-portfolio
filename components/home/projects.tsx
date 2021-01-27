@@ -31,11 +31,11 @@ export default function Projects(): JSX.Element {
                   Something he has <span className="text-pink font-bold">built.</span>
                 </h1>
                 <div className="sm:ml-52 xl:ml-96 transform rotate-90">
-                  <Link href="/work">
+                  <Link href="#projects">
                     <img
                       src="/images/vectors/arrows-right.svg"
                       alt="Next"
-                      className="hidden lg:block w-14 cursor-pointer lg:mt-24 xl:mt-16 sm:mt-0 transform-all animate-translateright "
+                      className="hidden lg:block w-14 lg:mt-24 xl:mt-16 sm:mt-0 transform-all animate-translateright "
                     />
                   </Link>
                 </div>

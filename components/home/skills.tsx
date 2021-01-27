@@ -4,7 +4,7 @@ import SkillsIcons from './skills-icon';
 export default function Skills(): JSX.Element {
   return (
     <>
-      <div className="relative h-auto  py-10 lg:py-20">
+      <div className="relative h-auto py-10 lg:py-20" id="skills">
         <img
           src="/images/vectors/cylinder.svg"
           alt="Cylinder Vector"

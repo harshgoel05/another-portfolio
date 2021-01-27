@@ -32,7 +32,7 @@ export default function Work(): JSX.Element {
                   <img
                     src="/images/vectors/arrows-right.svg"
                     alt="Next"
-                    className="w-14 cursor-pointer mt-10 sm:mt-0 transform-all animate-translateright"
+                    className="w-14 mt-10 sm:mt-0 transform-all animate-translateright"
                   />
                 </Link>
               </div>

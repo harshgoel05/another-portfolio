@@ -9,9 +9,12 @@ body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   cursor: url('/images/cursor.svg'), auto;
+  scroll-behavior: smooth;
 }
-*:hover {
-  cursor: url('/images/cursor.svg'), auto;
+*:hover,
+*:active,
+*:focus {
+  cursor: url('/images/cursor.svg'), auto !important;
 }
 
 a {
