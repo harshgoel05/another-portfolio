@@ -1,8 +1,7 @@
 interface Props {
   text: string;
   type: 'solid' | 'outlined';
-  // eslint-disable-next-line react/require-default-props
-  onClickHandler?: () => void;
+  onClickHandler: () => void;
 }
 export default function Button({ text, type, onClickHandler = () => {} }: Props): JSX.Element {
   return (

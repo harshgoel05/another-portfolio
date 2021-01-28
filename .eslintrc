@@ -27,6 +27,7 @@
         "aspects": ["invalidHref", "preferButton"]
       }
     ],
+    "consistent-return": ["error", { "treatUndefinedAsUnspecified": true }],
     "react/jsx-props-no-spreading": "off"
   },
   "globals": {

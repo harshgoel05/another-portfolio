@@ -1,5 +1,3 @@
-/* eslint-disable array-callback-return */
-/* eslint-disable consistent-return */
 /* eslint-disable react/no-array-index-key */
 import { Companies, Company } from '@constants';
 import { HeaderSmall } from '@shared-components';
