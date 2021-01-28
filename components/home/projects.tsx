@@ -7,7 +7,7 @@ export default function Projects(): JSX.Element {
   return (
     <>
       <div>
-        <div className="relative h-auto  py-10 lg:py-20">
+        <div className="relative h-auto py-10 lg:py-20">
           <img
             src="/images/vectors/heart.svg"
             alt="Circle Vector"

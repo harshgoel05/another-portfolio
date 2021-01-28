@@ -1,6 +1,9 @@
+/* eslint-disable array-callback-return */
+/* eslint-disable consistent-return */
+/* eslint-disable react/no-array-index-key */
+import { Companies, Company } from '@constants';
 import { HeaderSmall } from '@shared-components';
 import Details from './details';
-import WorkLogos from './work-logos';
 
 export default function Landing(): JSX.Element {
   return (
@@ -16,7 +19,7 @@ export default function Landing(): JSX.Element {
           alt="Vector"
           className="fixed -left-10 -bottom-14 lg:-left-44 lg:-bottom-44 w-75p opacity-50 md:opacity-100 sm:w-1/3 md:w-1/4 lg:w-1/3 pointer-events-none animate-spin"
         />
-        <div className="ml-4 sm:mx-12 md:mx-16 grid grid-cols-12 gap-4  h-full place-items-center items-center">
+        <div className="ml-4 sm:mx-12 md:mx-16 grid grid-cols-12 gap-4 h-full place-items-center items-center">
           <div className="col-span-12 md:col-span-7 lg:col-span-6 flex flex-col justify-center items-center">
             {/* Hero Header */}
             <div className="items-center w-3/4 relative">
@@ -30,7 +33,17 @@ export default function Landing(): JSX.Element {
             </div>
           </div>
           <div className="col-span-12 md:col-span-5 lg:col-span-6 grid grid-cols-3 gap-4 lg:gap-14 my-10 sm:mt-0">
-            <WorkLogos />
+            {Companies.map(
+              (company: Company, index): JSX.Element =>
+                company.logo_url && (
+                  <img
+                    src={company?.logo_url}
+                    alt={company.name}
+                    key={index}
+                    className="w-16 sm:w-24"
+                  />
+                )
+            )}
           </div>
         </div>
         <Details />

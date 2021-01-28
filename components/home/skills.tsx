@@ -15,7 +15,7 @@ export default function Skills(): JSX.Element {
           alt="L Vector"
           className="absolute left-0 md:left-35p bottom-0 block md:hidden lg:block w-75p opacity-50 md:opacity-100 sm:w-1/3 md:w-1/4 lg:w-1/3 pointer-events-none"
         />
-        <div className="ml-4 sm:mx-12 md:mx-16 grid grid-cols-12 gap-4  h-auto place-items-center items-center">
+        <div className="ml-4 sm:mx-12 md:mx-16 grid grid-cols-12 gap-4 h-auto place-items-center items-center">
           <div className="col-span-12 md:col-span-7 lg:col-span-6 flex flex-col justify-center items-center">
             {/* Hero Header */}
             <div className="items-center w-3/4 relative">
