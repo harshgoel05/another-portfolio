@@ -1,4 +1,4 @@
-import { SocialMedia } from '@constants';
+import { socialmedia } from '@constants';
 
 interface Props {
   link: string;
@@ -22,7 +22,7 @@ export default function SocialBar(): JSX.Element {
   return (
     <div className="fixed left-3 md:left-5 bottom-0 z-50">
       <div className="flex flex-col  justify-center items-center ">
-        {SocialMedia.map((item) => {
+        {socialmedia.map((item) => {
           return (
             <SocialIcon
               link={item.link}

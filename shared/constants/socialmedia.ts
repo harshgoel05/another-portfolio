@@ -1,4 +1,4 @@
-const SocialMedia = [
+const socialmedia = [
   {
     link: 'tel:+91-7519472787',
     image_file: 'call',
@@ -32,4 +32,4 @@ const SocialMedia = [
   }
 ];
 
-export default SocialMedia;
+export default socialmedia;

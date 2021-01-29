@@ -1,4 +1,4 @@
-const Companies = [
+const companies = [
   {
     name: 'Hashbinary LLP',
     logo_url: '/images/companies/hashbinary.svg',
@@ -146,4 +146,4 @@ export type Company = {
   responsibilities: string[];
 };
 
-export { Companies };
+export { companies };

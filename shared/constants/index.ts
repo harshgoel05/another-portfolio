@@ -1,10 +1,10 @@
-import SocialMedia from './socialmedia';
-import NavLinks from './navlinks';
-import { Project, Projects } from './projects';
-import { Companies, Company } from './companies';
+import socialmedia from './socialmedia';
+import navlinks from './navlinks';
+import { Project, projects } from './projects';
+import { companies, Company } from './companies';
 import technologies from './technologies';
 
-export { SocialMedia, NavLinks, Projects, Companies, technologies };
+export { socialmedia, navlinks, projects, companies, technologies };
 export type { Project, Company };
 
 export const RESUME_URL = 'bit.ly/harshgoelresume';

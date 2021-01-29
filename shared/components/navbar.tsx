@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Menu } from 'react-feather';
-import { NavLinks } from '@constants';
+import { navlinks } from '@constants';
 
 type Props = {
   href: string;
@@ -76,7 +76,7 @@ const Navbar = (): JSX.Element => {
         <div className={showMobileNav ? 'block pt-3 transition-all' : 'hidden md:block '}>
           {/* Navbar Items */}
           <ul className="md:flex md:flex-row pr-10 border-pink border-2 md:border-none">
-            {NavLinks.map((item) => {
+            {navlinks.map((item) => {
               return <NavItem title={item.title} href={item.href} key={item.href} />;
             })}
           </ul>

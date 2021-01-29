@@ -1,4 +1,4 @@
-import { Project, Projects } from '@constants';
+import { Project, projects } from '@constants';
 import { Footer, Loader, Navbar, SocialBar } from '@shared-components';
 import { ProjectDetailedPage } from '@components';
 import { useRouter } from 'next/router';
@@ -10,7 +10,7 @@ const ProjectDetail = (): JSX.Element => {
   const [project, setProject] = useState<Project | string>('loading');
   useEffect(() => {
     const { slug } = router.query;
-    const found = Projects.find((p) => p.slug === slug);
+    const found = projects.find((p) => p.slug === slug);
     setProject(found);
   }, [project]);
   if (project === 'loading') {
