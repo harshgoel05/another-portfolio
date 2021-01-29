@@ -1,29 +1,29 @@
 export const projects = [
-  {
-    slug: 'brine-cleanup',
-    tagline: 'Brine cleanup envision healthy reservoirs and oceans!',
-    img: '/images/projects/brinecleanup.jpg',
-    description:
-      'BrineCleanup envision healthy reservoirs and oceans for which humanity is indebted to commit, care and appreciate our ecosystem and share values of indispensability for the global resources and marine biodiversity which would integrate a mutual co-existence for the long term benefit of people and all the life on Mother Earth. A website for them full of greenery built upon HTML,CSS and Javascript',
-    name: 'Brine Cleanup',
-    url: 'http://brinecleanup.com/',
-    tags: ['HTML', 'CSS', 'JavaScript'],
-    category: ['web'],
-    github: 'https://github.com/harshgoel05/Brine-Cleanup',
-    featured: false
-  },
-  {
-    slug: 'carl-srm',
-    tagline: 'A student-run Research and Development Lab!',
-    description:
-      "CARL (Cognitive Applications Research Lab) is an independent student-run Research and Development Lab, started in SRM IST. CARL offers one a platform to enhance and nurture one's research acumen and development abilities. By bridging the gap between students and academia, we not only make research easily accessible for everyone but also encourage students to write their own papers. ",
-    img: '/images/projects/carl.jpg',
-    name: 'CARL SRM',
-    url: 'http://carlresearch.org/',
-    tags: ['HTML', 'CSS', 'JavaScript'],
-    category: ['web'],
-    featured: false
-  },
+  // {
+  //   slug: 'brine-cleanup',
+  //   tagline: 'Brine cleanup envision healthy reservoirs and oceans!',
+  //   img: '/images/projects/brinecleanup.jpg',
+  //   description:
+  //     'BrineCleanup envision healthy reservoirs and oceans for which humanity is indebted to commit, care and appreciate our ecosystem and share values of indispensability for the global resources and marine biodiversity which would integrate a mutual co-existence for the long term benefit of people and all the life on Mother Earth. A website for them full of greenery built upon HTML,CSS and Javascript',
+  //   name: 'Brine Cleanup',
+  //   url: 'http://brinecleanup.com/',
+  //   tags: ['HTML', 'CSS', 'JavaScript'],
+  //   category: ['web'],
+  //   github: 'https://github.com/harshgoel05/Brine-Cleanup',
+  //   featured: false
+  // },
+  // {
+  //   slug: 'carl-srm',
+  //   tagline: 'A student-run Research and Development Lab!',
+  //   description:
+  //     "CARL (Cognitive Applications Research Lab) is an independent student-run Research and Development Lab, started in SRM IST. CARL offers one a platform to enhance and nurture one's research acumen and development abilities. By bridging the gap between students and academia, we not only make research easily accessible for everyone but also encourage students to write their own papers. ",
+  //   img: '/images/projects/carl.jpg',
+  //   name: 'CARL SRM',
+  //   url: 'http://carlresearch.org/',
+  //   tags: ['HTML', 'CSS', 'JavaScript'],
+  //   category: ['web'],
+  //   featured: false
+  // },
   {
     slug: 'conneckt',
     tagline: 'ConneKting Alumni to college!',
@@ -31,7 +31,7 @@ export const projects = [
       'Built at SIH 2020 Internals. ConneKt is a web based platform, providing a platform to college students to stay connected with the college even after graduating. Alumni can share opportunities,mentor students, stay connected with college authorities, update their job details and what not. A perfect conneKtion.',
     img: '/images/projects/connekt.png',
     name: 'ConneKt',
-    tags: ['Angular', 'Firebase'],
+    tags: ['Angular', 'Firebase', 'TypeScript'],
     github: 'https://github.com/sachdeva-shrey/Connekt-Alumni-Tracker',
     category: ['web'],
     featured: false
@@ -92,11 +92,13 @@ export const projects = [
   },
   {
     slug: 'inception-wave',
-    // tagline: 'Sometagline goes here!',
+    tagline: 'Built during internship for the organization.',
+    description:
+      'This was my introduction to Angular 8, got tremendous please solving the bugs that came in the way. Learnt about Angular components, routings and other features like dynamic rendering,dyanmic classes etc.',
     img: '/images/projects/inception_wave.jpg',
     name: 'Inception Wave',
     url: 'https://inceptionwave.in/',
-    tags: ['Angular', 'NodeJS', 'ExpressJS', 'MongoDB'],
+    tags: ['Angular', 'HTML', 'CSS', 'TypeScript'],
     category: ['web'],
     github: 'https://github.com/harshgoel05/inception-wave',
     featured: false
@@ -110,7 +112,7 @@ export const projects = [
     name: 'KZILLA-XYZ',
     url: 'http://kzilla.xyz/',
     github: 'https://github.com/srm-kzilla/kzilla.xyz',
-    tags: ['SvelteJS', 'NodeJS', 'ExpressJS', 'MongoDB'],
+    tags: ['SvelteJS', 'NodeJS', 'ExpressJS', 'MongoDB', 'TypeScript'],
     category: ['web'],
     launch_video: 'https://youtu.be/XPwWGZ_KnEE',
     featured: true
@@ -164,7 +166,7 @@ export const projects = [
     img: '/images/projects/recruitments-srmkzilla.png',
     name: 'Recruitments 2020',
     url: 'https://recruitments.srmkzilla.net/',
-    tags: ['ReactJS', 'NodeJS', 'ExpressJS', 'MongoDB'],
+    tags: ['ReactJS', 'NodeJS', 'ExpressJS', 'MongoDB', 'TypeScript'],
     category: ['web'],
     featured: true
   },
@@ -217,17 +219,19 @@ export const projects = [
     name: 'Insolvers',
     url: 'https://insolvers.herokuapp.com/',
     github: 'https://github.com/harshgoel05/insolvers-app',
-    tags: ['React', 'ReactNative', 'NodeJS', 'ExpressJS', 'MongoDB'],
+    tags: ['React', 'ReactNative', 'NodeJS', 'ExpressJS', 'MongoDB', 'TypeScript'],
     category: ['web', 'app', 'ui-ux'],
     featured: true
   },
   {
     slug: 'jack',
-    // tagline: 'Sometagline goes here!',
+    tagline: 'Meet Jack! A cool beep bot to play around.',
+    description:
+      "Jack, SRMKZILLA's official discord bot. He can do everything from sending you memes to shrinking a loooong URL using KZILLA.XYZ. Wait, it also generates certificates for the events you attend for SRMKZILLA. This bot manages everything. Everything? **Yes,Everything** ",
     img: '/images/projects/jack.png',
     name: 'Jack',
     url: 'https://community.srmkzilla.net/',
-    tags: ['NodeJS', 'DiscordJS', 'Typescript'],
+    tags: ['NodeJS', 'DiscordJS', 'TypeScript'],
     category: ['discord'],
     featured: true
   }

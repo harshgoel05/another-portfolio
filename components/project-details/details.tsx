@@ -21,14 +21,14 @@ export default function Details({ project }: Props): JSX.Element {
             </div>
           </div>
           <div className="col-span-12 flex md:col-span-4 lg:col-span-6 items-center justify-items-center">
-            {/* <iframe
+            <iframe
               className="w-3/4 h-96 mx-auto text-center"
               src={project.launch_video}
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
-              title="kzill"
-            /> */}
+              title="kzilla"
+            />
           </div>
         </div>
       )}

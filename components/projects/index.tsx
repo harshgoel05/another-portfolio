@@ -2,18 +2,23 @@ import { Project, projects } from '@constants';
 import { ProjectCard } from '@shared-components';
 import { useEffect, useState } from 'react';
 
-const category = [
-  { label: 'All', value: 'all' },
-  { label: 'Web', value: 'web' },
-  { label: 'App', value: 'app' },
-  { label: 'UI-UX', value: 'ui-ux' }
-];
 const ProjectsPage = (): JSX.Element => {
+  const category = [{ value: 'all', label: 'ALL' }];
+  projects.forEach((p) =>
+    p.category.forEach((cat) => {
+      if (!category.find((c) => c.value === cat))
+        category.push({ value: cat, label: cat.toUpperCase() });
+    })
+  );
   const [active, setActive] = useState('all');
+
+  function changeProjects(c) {
+    setActive(c.value);
+  }
   useEffect(() => {}, [active]);
   return (
     <>
-      <div className="bg-blue pt-28">
+      <div className="bg-blue pt-28 pb-20">
         <div className="overflow-x-hidden">
           <div className="pt-10 ml-4 sm:mx-12 md:mx-16">
             <div className="mb-10">
@@ -30,12 +35,12 @@ const ProjectsPage = (): JSX.Element => {
                   <button
                     key={c.value}
                     type="button"
-                    onClick={() => setActive(c.value)}
+                    onClick={() => changeProjects(c)}
                     className={`${
                       active === c.value
                         ? 'text-blue bg-pink border-transparent'
                         : 'text-white border-pink'
-                    } border-2 py-2 px-6 rounded-xl mx-4 outline-none focus:outline-none transition-all hover:shadow-light-3xl
+                    } border-2 py-2 px-6 rounded-xl mx-4 outline-none mb-2 focus:outline-none transition-all hover:shadow-light-3xl
                     `}>
                     {c.label}
                   </button>

@@ -13,11 +13,11 @@ const technologies = [
   },
   {
     src: '/images/skills/js.svg',
-    name: 'Javascript'
+    name: 'JavaScript'
   },
   {
     src: '/images/skills/ts.svg',
-    name: 'Typescript'
+    name: 'TypeScript'
   },
   {
     src: '/images/skills/react-native.svg',
