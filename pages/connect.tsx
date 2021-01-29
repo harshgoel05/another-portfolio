@@ -1,10 +1,12 @@
-import { Navbar } from '../shared/components';
+import Connect from 'components/connect';
+import { Footer, Navbar } from '../shared/components';
 
 export default function Contact(): JSX.Element {
   return (
     <>
       <Navbar />
-      <div>This is contact me page</div>
+      <Connect />
+      <Footer />
     </>
   );
 }
