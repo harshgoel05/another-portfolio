@@ -1,5 +1,5 @@
 import { Project, projects } from '@constants';
-import { SocialBar, ProjectCard } from '@shared-components';
+import { ProjectCard } from '@shared-components';
 import { useEffect, useState } from 'react';
 
 const category = [
@@ -13,9 +13,9 @@ const ProjectsPage = (): JSX.Element => {
   useEffect(() => {}, [active]);
   return (
     <>
-      <div className="bg-blue pt-8 lg:pt-28">
+      <div className="bg-blue pt-28">
         <div className="overflow-x-hidden">
-          <div className="bg-blue pt-28 ml-4 sm:mx-12 md:mx-16">
+          <div className="pt-10 ml-4 sm:mx-12 md:mx-16">
             <div className="mb-10">
               <h1 className="text-center text-3xl sm:text-2xl xl:text-3xl font-extrabold text-white leading-none mb-6">
                 Something that he has build
@@ -54,7 +54,6 @@ const ProjectsPage = (): JSX.Element => {
           </div>
         </div>
       </div>
-      <SocialBar />
     </>
   );
 };

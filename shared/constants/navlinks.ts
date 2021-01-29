@@ -5,7 +5,7 @@ const navlinks = [
   },
   {
     title: 'Explore',
-    href: '/explore'
+    href: '/#skills'
   },
   {
     title: 'Work',
