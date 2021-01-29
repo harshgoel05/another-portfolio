@@ -1,9 +1,11 @@
-import { HeaderSmall } from '@shared-components';
+import { Project, Projects as projectsList } from '@constants';
+import { Button, HeaderSmall, ProjectCard } from '@shared-components';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import TextCards from 'shared/components/text-cards';
-import ProjectsCards from './projects-cards';
 
 export default function Projects(): JSX.Element {
+  const router = useRouter();
   return (
     <>
       <div>
@@ -66,7 +68,24 @@ export default function Projects(): JSX.Element {
             </div>
           </div>
         </div>
-        <ProjectsCards />
+        <div className="relative h-auto sm:h-auto md:h-auto ml-4 sm:mx-12 md:mx-16" id="projects">
+          <div className="grid md:grid-cols-2 gap-4 place-items-center">
+            {projectsList.map((project: Project) => (
+              <ProjectCard
+                project={project}
+                key={project.slug}
+                filter={{ key: 'featured', value: true }}
+              />
+            ))}
+          </div>
+          <div className="flex justify-center mt-10 lg:mt-4">
+            <Button
+              type="solid"
+              text="Show me more! 🔥"
+              onClickHandler={() => router.push('/projects')}
+            />
+          </div>
+        </div>
       </div>
     </>
   );
