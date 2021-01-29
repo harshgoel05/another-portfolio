@@ -112,6 +112,7 @@ export const projects = [
     github: 'https://github.com/srm-kzilla/kzilla.xyz',
     tags: ['SvelteJS', 'NodeJS', 'ExpressJS', 'MongoDB'],
     category: ['web'],
+    launch_video: 'https://youtu.be/XPwWGZ_KnEE',
     featured: true
   },
   {
@@ -243,4 +244,5 @@ export type Project = {
   github?: string;
   tagline?: string;
   description?: string;
+  launch_video?: string;
 };
