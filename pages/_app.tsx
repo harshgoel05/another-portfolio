@@ -87,17 +87,15 @@ function MyApp({ Component, pageProps, router }: AppProps): JSX.Element {
         <link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#5bbad5" />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-2595CLJE11" />
         <script
           dangerouslySetInnerHTML={{
-            __html: `<!-- Global site tag (gtag.js) - Google Analytics -->
-            <script async src="https://www.googletagmanager.com/gtag/js?id=G-2595CLJE11"></script>
-            <script>
+            __html: `       
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
             
-              gtag('config', 'G-2595CLJE11');
-            </script>`
+              gtag('config', 'G-2595CLJE11');`
           }}
         />
       </Head>
