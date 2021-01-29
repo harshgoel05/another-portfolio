@@ -1,5 +1,6 @@
 import dynamic from 'next/dynamic';
 import { Footer, Navbar } from '@shared-components';
+import CustomCursor from 'shared/cursor';
 
 const WorkPage = dynamic(() => import('../components/work/index'), {
   ssr: false
@@ -10,6 +11,7 @@ export default function Work(): JSX.Element {
     <>
       <Navbar />
       <WorkPage />
+      <CustomCursor />
       <Footer />
     </>
   );

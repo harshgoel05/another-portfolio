@@ -78,6 +78,7 @@ a {
   pointer-events: none;
   background-color: pink;
   opacity: 0.5;
+  z-index: 999;
 }
 
 @keyframes cursorAnim {
