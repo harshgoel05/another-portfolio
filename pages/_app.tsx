@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 import { AppProps } from 'next/dist/next-server/lib/router/router';
 import '../styles/global.css';
 import Head from 'next/head';
@@ -86,6 +87,19 @@ function MyApp({ Component, pageProps, router }: AppProps): JSX.Element {
         <link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#5bbad5" />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `<!-- Global site tag (gtag.js) - Google Analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-2595CLJE11"></script>
+            <script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+            
+              gtag('config', 'G-2595CLJE11');
+            </script>`
+          }}
+        />
       </Head>
       <AnimatePresence>
         <div className="page-transition-wrapper overflow-x-hidden min-h-screen">

@@ -8,13 +8,13 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  cursor: url('/images/cursor.svg'), auto;
+  cursor: none;
   scroll-behavior: smooth;
 }
 *:hover,
 *:active,
 *:focus {
-  cursor: url('/images/cursor.svg'), auto !important;
+  cursor: none;
 }
 
 a {
@@ -47,13 +47,8 @@ a {
 ::-moz-selection {
   color: #232946;
   background-image: linear-gradient(45deg, #eebbc3, #b8c1ec);
-
-  /* Set the background size and repeat properties. */
   background-size: 100%;
   background-repeat: repeat;
-
-  /* Use the text as a mask for the background. */
-  /* This will show the gradient as a text color rather than element bg. */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
@@ -66,25 +61,39 @@ a {
 }
 
 .gradient-text {
-  /* Fallback: Set a background color. */
   background-color: #b8c1ec;
-
-  /* Create the gradient. */
   background-image: linear-gradient(45deg, #eebbc3, #b8c1ec);
-
-  /* Set the background size and repeat properties. */
   background-size: 100%;
   background-repeat: repeat;
-
-  /* Use the text as a mask for the background. */
-  /* This will show the gradient as a text color rather than element bg. */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
 }
-.filter-grayscale {
-  filter: grayscale(100%);
+.cursor {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  background-color: pink;
+  opacity: 0.5;
+}
+
+@keyframes cursorAnim {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(5);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+.expand {
+  animation: cursorAnim 0.5s forwards;
 }
 
 @tailwind utilities;
