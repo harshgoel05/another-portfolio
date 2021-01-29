@@ -40,7 +40,6 @@ export const Projects = [
     url: 'https://harshgoel05.github.io/dr-jeewan-web/',
     tags: ['HTML', 'CSS', 'JavaScript'],
     category: ['web'],
-
     featured: false
   },
   {
@@ -75,6 +74,7 @@ export const Projects = [
     name: 'Inception Wave',
     url: 'https://inceptionwave.in/',
     tags: ['Angular 8', 'NodeJS', 'Express', 'MongoDB'],
+    category: ['web'],
     featured: false
   },
   {
@@ -128,7 +128,6 @@ export const Projects = [
     url: 'https://recruitments.srmkzilla.net/',
     tags: ['ReactJS', 'NodeJS', 'Express', 'MongoDB'],
     category: ['web'],
-
     featured: true
   },
   {
@@ -153,6 +152,7 @@ export const Projects = [
     img: '/images/projects/srmiec-2020.png',
     name: 'SRM Indian Energy Conference 2020',
     url: 'http://srmiec.co.in/',
+    tags: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MYSQL'],
     category: ['web', 'ui-ux'],
     featured: true
   },
@@ -161,6 +161,8 @@ export const Projects = [
     img: '/images/projects/workmailcommunity.png',
     name: 'Work Mail Community',
     url: 'http://workmailcommunity.in/',
+    tags: ['HTML', 'CSS', 'JavaScript'],
+    category: ['web'],
     featured: true
   },
   {
