@@ -47,7 +47,7 @@ export default function Details(): JSX.Element {
           </div>
         </div>
         <div className="col-span-12 sm:col-span-6 flex flex-col justify-center items-center min-h-full">
-          <CompanyDetails company1={Companies[activeIndex]} />
+          <CompanyDetails activeCompany={Companies[activeIndex]} />
         </div>
       </div>
     </>
