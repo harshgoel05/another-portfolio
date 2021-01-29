@@ -43,8 +43,6 @@ const technologies = [
     src: '/images/skills/git.svg',
     name: 'Git'
   },
-  // to add
-
   {
     src: '/images/skills/html.svg',
     name: 'HTML'
@@ -70,7 +68,7 @@ const technologies = [
     name: 'PHP'
   },
   {
-    src: '/images/skills/discordjs.svg',
+    src: '/images/skills/discordjs.png',
     name: 'DiscordJS'
   }
 ];
