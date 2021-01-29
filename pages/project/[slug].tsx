@@ -1,5 +1,5 @@
 import { Project, Projects } from '@constants';
-import { Loader, Navbar } from '@shared-components';
+import { Footer, Loader, Navbar, SocialBar } from '@shared-components';
 import { ProjectDetailedPage } from '@components';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
@@ -22,6 +22,8 @@ const ProjectDetail = (): JSX.Element => {
       <div className="bg-blue pt-28 overflow-x-hidden">
         <ProjectDetailedPage project={project as Project} />
       </div>
+      <SocialBar />
+      <Footer />
     </>
   ) : (
     <div>
