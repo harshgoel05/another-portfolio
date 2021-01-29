@@ -1,4 +1,4 @@
-import { Project, Projects as projectsList } from '@constants';
+import { Project, projects as projectsList } from '@constants';
 import { Button, HeaderSmall, ProjectCard } from '@shared-components';
 import Link from 'next/link';
 import { useRouter } from 'next/router';

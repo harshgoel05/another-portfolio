@@ -1,5 +1,5 @@
 /* eslint-disable react/no-array-index-key */
-import { Companies, Company } from '@constants';
+import { companies, Company } from '@constants';
 import { HeaderSmall } from '@shared-components';
 import Details from './details';
 
@@ -31,7 +31,7 @@ export default function Landing(): JSX.Element {
             </div>
           </div>
           <div className="col-span-12 md:col-span-5 lg:col-span-6 grid grid-cols-3 gap-4 lg:gap-14 my-10 sm:mt-0">
-            {Companies.map(
+            {companies.map(
               (company: Company, index): JSX.Element =>
                 company.logo_url && (
                   <img

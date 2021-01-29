@@ -1,4 +1,4 @@
-const NavLinks = [
+const navlinks = [
   {
     title: 'Home',
     href: '/'
@@ -20,4 +20,4 @@ const NavLinks = [
     href: '/connect'
   }
 ];
-export default NavLinks;
+export default navlinks;

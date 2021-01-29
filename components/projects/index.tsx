@@ -1,4 +1,4 @@
-import { Project, Projects } from '@constants';
+import { Project, projects } from '@constants';
 import { SocialBar, ProjectCard } from '@shared-components';
 import { useEffect, useState } from 'react';
 
@@ -43,7 +43,7 @@ const ProjectsPage = (): JSX.Element => {
               </div>
             </div>
             <div className="grid md:grid-cols-2 gap-4 place-items-center">
-              {Projects.map((project: Project) => (
+              {projects.map((project: Project) => (
                 <ProjectCard
                   project={project}
                   key={project.slug}

@@ -1,9 +1,10 @@
-export const Projects = [
+export const projects = [
   {
     slug: 'brine-cleanup',
-    // tagline: 'Sometagline goes here!',
+    tagline: 'Brine cleanup envision healthy reservoirs and oceans!',
     img: '/images/projects/brinecleanup.jpg',
-
+    description:
+      'BrineCleanup envision healthy reservoirs and oceans for which humanity is indebted to commit, care and appreciate our ecosystem and share values of indispensability for the global resources and marine biodiversity which would integrate a mutual co-existence for the long term benefit of people and all the life on Mother Earth. A website for them full of greenery built upon HTML,CSS and Javascript',
     name: 'Brine Cleanup',
     url: 'http://brinecleanup.com/',
     tags: ['HTML', 'CSS', 'JavaScript'],
@@ -13,7 +14,9 @@ export const Projects = [
   },
   {
     slug: 'carl-srm',
-    // tagline: 'Sometagline goes here!',
+    tagline: 'A student-run Research and Development Lab!',
+    description:
+      "CARL (Cognitive Applications Research Lab) is an independent student-run Research and Development Lab, started in SRM IST. CARL offers one a platform to enhance and nurture one's research acumen and development abilities. By bridging the gap between students and academia, we not only make research easily accessible for everyone but also encourage students to write their own papers. ",
     img: '/images/projects/carl.jpg',
     name: 'CARL SRM',
     url: 'http://carlresearch.org/',
@@ -23,7 +26,9 @@ export const Projects = [
   },
   {
     slug: 'conneckt',
-    // tagline: 'Sometagline goes here!',
+    tagline: 'ConneKting Alumni to college!',
+    description:
+      'Built at SIH 2020 Internals. ConneKt is a web based platform, providing a platform to college students to stay connected with the college even after graduating. Alumni can share opportunities,mentor students, stay connected with college authorities, update their job details and what not. A perfect conneKtion.',
     img: '/images/projects/connekt.png',
     name: 'ConneKt',
     tags: ['Angular', 'Firebase'],
@@ -33,7 +38,6 @@ export const Projects = [
   },
   {
     slug: 'srm-daa',
-    // tagline: 'Sometagline goes here!',
     img: '/images/projects/daa.jpg',
     name: 'Directorate of Alumni Affairs',
     tags: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
@@ -43,7 +47,7 @@ export const Projects = [
   },
   {
     slug: 'dr-jeewan-portfolio',
-    // tagline: 'Sometagline goes here!',
+    tagline: 'A perfect potfolio for the perfect doctor!',
     img: '/images/projects/dr-jeewan.jpg',
     name: 'Dr. Jeewan Porfolio',
     url: 'https://harshgoel05.github.io/dr-jeewan-web/',
@@ -54,7 +58,9 @@ export const Projects = [
   },
   {
     slug: 'goco-tracker',
-    // tagline: 'Sometagline goes here!',
+    tagline: 'One stop solutions for COVID-19 Quarantine.',
+    description:
+      'GoCoTracker is a web app build on MEAN(MongoDB, Express, Angular8, NodeJS) that provides you one-stop updates on COVID-19. Not only updates, but It also helps you to find open stores nearby during the quarantine period. By this web app, we try to minimize the movement of people by providing them a platform to even connect to a doctor on fingertips.',
     img: '/images/projects/goco.png',
     name: 'GoCo Tracker',
     url: 'https://gocotracker.herokuapp.com/',
@@ -65,7 +71,7 @@ export const Projects = [
   },
   {
     slug: 'handholding-solution',
-    // tagline: 'Sometagline goes here!',
+    tagline: 'Building digital identity!',
     img: '/images/projects/hhs.png',
     name: 'Handholding Solution',
     url: 'https://handholdingsolution.com/',
@@ -76,7 +82,7 @@ export const Projects = [
   },
   {
     slug: 'idy-dashboard',
-    // tagline: 'Sometagline goes here!',
+    tagline: 'Dashboard that makes work easy!',
     img: '/images/projects/idy-dashboard.png',
     name: 'Idy Dashboards',
     tags: ['HTML', 'CSS', 'JavaScript'],
@@ -97,7 +103,9 @@ export const Projects = [
   },
   {
     slug: 'kzilla-xyz',
-    // tagline: 'Sometagline goes here!',
+    tagline: 'Shorten the URL. Broaden the reach.',
+    description:
+      "Life is too short to have long URLs. Striving to make your life easier, and a lot more fun, say hello to the new snappy URL shrinker, that automagically got your back.With the powerful analytics, XYZ is all you need to stay ahead of the rest. Get your hands on it, and you will know why it's the best. \n Easy, Simple and Fast links with some amazing features like caching, QR code. Btw, you can also enable/disable links as required",
     img: '/images/projects/kzilla-xyz.png',
     name: 'KZILLA-XYZ',
     url: 'http://kzilla.xyz/',
@@ -118,7 +126,7 @@ export const Projects = [
   },
   {
     slug: 'milan-20',
-    // tagline: 'Sometagline goes here!',
+    tagline: "Asia's 5th biggest Cultural Fest",
     img: '/images/projects/milan-20.jpg',
     name: "SRM MILAN'20",
     tags: ['HTML', 'CSS', 'JavaScript'],
@@ -138,7 +146,7 @@ export const Projects = [
   },
   {
     slug: 'porfolio-v1',
-    // tagline: 'Sometagline goes here!',
+    tagline: 'The frist alteration of what you see now.',
     img: '/images/projects/portfolio_v1.jpg',
     name: 'Porfolio 1.0',
     url: 'https://harshgoel05.github.io/portfolio-v1/',
@@ -149,7 +157,9 @@ export const Projects = [
   },
   {
     slug: 'recruitments-2020',
-    // tagline: 'Sometagline goes here!',
+    tagline: 'To all the crazy developers and designers, welcome home.',
+    description:
+      "Crafted a web portal, we call it #Recruitments 2020 to for the purpose what it's name suggests! A state-of-the-art platform where students can apply for a seat in SRMKZILLA. From singup to submitting a project, you get a wonderful experience.",
     img: '/images/projects/recruitments-srmkzilla.png',
     name: 'Recruitments 2020',
     url: 'https://recruitments.srmkzilla.net/',
