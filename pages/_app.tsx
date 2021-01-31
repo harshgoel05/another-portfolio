@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable react/no-danger */
 import { AppProps } from 'next/dist/next-server/lib/router/router';
 import '../styles/global.css';
@@ -5,6 +6,7 @@ import Head from 'next/head';
 import Router from 'next/router';
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
+import CustomCursor from 'shared/cursor';
 import Loader from '../shared/components/loader';
 
 function MyApp({ Component, pageProps, router }: AppProps): JSX.Element {
@@ -36,7 +38,34 @@ function MyApp({ Component, pageProps, router }: AppProps): JSX.Element {
   if (loading) {
     return <Loader />;
   }
+  const disableConsole = () => {
+    console.log(
+      '%c No, no! Well! I guess we have same intrest, :)',
+      'background: #212121; color: #f69510; padding: 6px; '
+    );
+    console.log(`
+    _   _                _        ____            _ 
+                                                                                    
+    _   _                        _     
+    | | | |   __ _   _ __   ___  | |__  
+    | |_| |  / _\` | | '__| / __| | '_ \\ 
+    |  _  | | (_| | | |    \\__ \\ | | | |
+    |_| |_|  \\__,_| |_|    |___/ |_| |_|
+    
+    _   ___         _       ____     ___     ___   _ 
+                                                                                             
+                                                             `);
 
+    console.log(
+      "%c Let's talk, head to contact page and schedule a call with me!",
+      'background: #212121; color: #f69510; padding: 6px;'
+    );
+
+    console.log = () => {};
+    console.error = () => {};
+  };
+
+  if (process.env.ENV === 'production') disableConsole();
   return (
     <div>
       <Head>
@@ -100,6 +129,7 @@ function MyApp({ Component, pageProps, router }: AppProps): JSX.Element {
         />
       </Head>
       <AnimatePresence>
+        <CustomCursor />
         <div className="page-transition-wrapper overflow-x-hidden min-h-screen">
           <motion.div
             transition={spring}

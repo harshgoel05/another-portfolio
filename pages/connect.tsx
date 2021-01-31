@@ -1,4 +1,3 @@
-import CustomCursor from 'shared/cursor';
 import { Connect } from '@components';
 import { getPersonalDetails } from '@utils/apiService';
 import { PersonalDetailsContext } from '@utils/contexts';
@@ -15,7 +14,6 @@ const Contact = ({ personalDetails }: Props): JSX.Element => {
       <PersonalDetailsContext.Provider value={personalDetails}>
         <Navbar />
         <Connect />
-        <CustomCursor />
         <Footer />
       </PersonalDetailsContext.Provider>
     </>

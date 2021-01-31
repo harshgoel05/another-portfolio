@@ -1,5 +1,4 @@
 import dynamic from 'next/dynamic';
-import CustomCursor from 'shared/cursor';
 import { Footer, Navbar } from '@shared-components';
 import { getPersonalDetails, getCompanyDetails } from '@utils/apiService';
 import { Company, PersonalDetails } from '@utils/types';
@@ -21,7 +20,6 @@ const Work = ({ personalDetails, companyDetails }: Props): JSX.Element => {
         <CompanyDetailsContext.Provider value={companyDetails}>
           <Navbar />
           <WorkPage />
-          <CustomCursor />
           <Footer />
         </CompanyDetailsContext.Provider>
       </PersonalDetailsContext.Provider>

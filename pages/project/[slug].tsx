@@ -1,15 +1,19 @@
 import { useRouter } from 'next/router';
-import { useContext, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Footer, Loader, Navbar, SocialBar } from '@shared-components';
-import { Project } from '@utils/types';
-import { ProjectDetailsContext } from '@utils/contexts';
+import { PersonalDetails, Project } from '@utils/types';
+import { PersonalDetailsContext, ProjectDetailsContext } from '@utils/contexts';
 import { ProjectDetailedPage } from '@components';
 import NotFound from '@pages/404';
-import CustomCursor from 'shared/cursor';
+import { getPersonalDetails, getProjectDetails } from '@utils/apiService';
 
-const ProjectDetail = (): JSX.Element => {
+type Props = {
+  personalDetails: PersonalDetails;
+  projectDetails: Project[];
+};
+
+const ProjectDetail = ({ personalDetails, projectDetails }: Props): JSX.Element => {
   const router = useRouter();
-  const projectDetails: Project[] = useContext(ProjectDetailsContext);
   const [project, setProject] = useState<Project | string>('loading');
   useEffect(() => {
     const { slug } = router.query;
@@ -21,20 +25,39 @@ const ProjectDetail = (): JSX.Element => {
   }
   return project ? (
     <>
-      <Navbar />
-      <div className="bg-blue pt-28 overflow-x-hidden">
-        <ProjectDetailedPage project={project as Project} />
-      </div>
-      <SocialBar />
-      <CustomCursor />
-      <Footer />
+      <PersonalDetailsContext.Provider value={personalDetails}>
+        <ProjectDetailsContext.Provider value={projectDetails}>
+          <Navbar />
+          <div className="bg-blue pt-28 overflow-x-hidden">
+            <ProjectDetailedPage project={project as Project} />
+          </div>
+          <SocialBar />
+          <Footer />
+        </ProjectDetailsContext.Provider>
+      </PersonalDetailsContext.Provider>
     </>
   ) : (
-    <div>
-      <NotFound />
-      <CustomCursor />
-    </div>
+    <NotFound />
   );
 };
 
 export default ProjectDetail;
+
+export async function getStaticProps(): Promise<{
+  props: { personalDetails: PersonalDetails; projectDetails: Project[] };
+}> {
+  const personalDetails = (await getPersonalDetails()) as PersonalDetails;
+  const projectDetails = (await getProjectDetails()) as Project[];
+  return { props: { personalDetails, projectDetails } };
+}
+
+export async function getStaticPaths(): Promise<any> {
+  const projectDetails = (await getProjectDetails()) as Project[];
+  const paths = projectDetails.map((p) => {
+    return { params: { slug: p.slug } };
+  });
+  return {
+    paths,
+    fallback: false
+  };
+}
