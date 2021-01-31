@@ -1,7 +1,11 @@
 import { HeaderSmall } from '@shared-components';
 import Link from 'next/link';
+import { useContext } from 'react';
+import { PersonalDetailsContext } from 'shared/utils/contexts';
+import { PersonalDetails } from 'shared/utils/types';
 
 export default function Work(): JSX.Element {
+  const personalDetails: PersonalDetails = useContext(PersonalDetailsContext);
   return (
     <>
       <div className="relative h-auto py-10 lg:py-20">
@@ -21,11 +25,11 @@ export default function Work(): JSX.Element {
               />
               <HeaderSmall text="What does he do?" />
               <h1 className="w-4/5 mb-3 mt-1 text-7xl sm:text-5xl md:text-7xl lg:text-4xl font-normal tracking-wide text-white leading-normal">
-                Currently building things at <span className="text-pink font-bold">SRMKZILLA</span>{' '}
-                as
+                Currently building things at{' '}
+                <span className="text-pink font-bold">{personalDetails.work.company}</span> as
               </h1>
               <h1 className="mb-3 mt-6 text-4xl sm:text-2xl md:text-3xl lg:text-2xl xl:text-1xl font-extrabold text-white leading-none ">
-                Technical Lead
+                {personalDetails.work.designation}
               </h1>
               <div className="sm:ml-52 xl:ml-96">
                 <Link href="/work">
@@ -40,7 +44,7 @@ export default function Work(): JSX.Element {
           </div>
           <div className="col-span-12 md:col-span-5 lg:col-span-6 flex flex-col items-center justify-center">
             <img
-              src="/images/srmkzilla_logo_white_mono.png"
+              src={personalDetails.work.logo}
               alt="SRMKZILLA"
               className="w-full p-10 sm:p-24 md:p-4 lg:p-24"
             />

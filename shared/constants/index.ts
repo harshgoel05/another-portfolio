@@ -6,5 +6,3 @@ import technologies from './technologies';
 
 export { socialmedia, navlinks, projects, companies, technologies };
 export type { Project, Company };
-
-export const RESUME_URL = 'bit.ly/harshgoelresume';

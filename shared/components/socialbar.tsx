@@ -1,4 +1,6 @@
-import { socialmedia } from '@constants';
+import { useContext } from 'react';
+import { PersonalDetailsContext } from 'shared/utils/contexts';
+import { PersonalDetails } from 'shared/utils/types';
 
 interface Props {
   link: string;
@@ -10,7 +12,7 @@ function SocialIcon({ alt_text, image_file, link }: Props): JSX.Element {
   return (
     <a href={link}>
       <img
-        src={`/images/icons/${image_file}.svg`}
+        src={image_file}
         alt={alt_text}
         className="w-6 md:w-8 mb-2 md:my-2 transition-all hover:opacity-40 transform hover:scale-75"
       />
@@ -19,10 +21,11 @@ function SocialIcon({ alt_text, image_file, link }: Props): JSX.Element {
 }
 
 export default function SocialBar(): JSX.Element {
+  const personalDetails: PersonalDetails = useContext(PersonalDetailsContext);
   return (
     <div className="fixed left-3 md:left-5 bottom-0 z-30">
       <div className="flex flex-col  justify-center items-center ">
-        {socialmedia.map((item) => {
+        {personalDetails.social_media.map((item) => {
           return (
             <SocialIcon
               link={item.link}

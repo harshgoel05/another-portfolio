@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Menu } from 'react-feather';
 import { navlinks } from '@constants';
+import { PersonalDetails } from 'shared/utils/types';
+import { PersonalDetailsContext } from 'shared/utils/contexts';
 
 type Props = {
   href: string;
@@ -31,6 +33,8 @@ const NavItem = ({ href, title }: Props): JSX.Element => {
 };
 
 const Navbar = (): JSX.Element => {
+  const personalDetails: PersonalDetails = useContext(PersonalDetailsContext);
+
   const [isScreenScrolled, setisScreenScrolled] = useState(false);
 
   const addShadowtoNav = () => {
@@ -56,7 +60,7 @@ const Navbar = (): JSX.Element => {
           <div>
             <Link href="/">
               <img
-                src="/images/logo-light.svg"
+                src={personalDetails.logo}
                 alt="e"
                 className={`${
                   isScreenScrolled ? 'w-1/5 md:w-3/12' : 'w-16 md:w-2/5'

@@ -1,11 +1,15 @@
-import { Project, projects as projectsList } from '@constants';
+// import { Project, projects as projectsList } from '@constants';
 import { Button, HeaderSmall, ProjectCard } from '@shared-components';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { useContext } from 'react';
 import TextCards from 'shared/components/text-cards';
+import { ProjectDetailsContext } from 'shared/utils/contexts';
+import { Project } from 'shared/utils/types';
 
 export default function Projects(): JSX.Element {
   const router = useRouter();
+  const projectDetails: Project[] = useContext(ProjectDetailsContext);
   return (
     <>
       <div>
@@ -70,7 +74,7 @@ export default function Projects(): JSX.Element {
         </div>
         <div className="relative h-auto sm:h-auto md:h-auto ml-4 sm:mx-12 md:mx-16" id="projects">
           <div className="grid md:grid-cols-2 gap-4 place-items-center">
-            {projectsList.map((project: Project) => (
+            {projectDetails.map((project: Project) => (
               <ProjectCard
                 project={project}
                 key={project.slug}
