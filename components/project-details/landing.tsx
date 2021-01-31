@@ -1,5 +1,5 @@
-import { Project } from 'shared/utils/constants';
 import { Button } from '@shared-components';
+import { Project } from '@utils/types';
 import Tilt from 'react-tilt';
 
 type Props = {

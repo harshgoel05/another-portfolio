@@ -1,4 +1,4 @@
-import { Project } from 'shared/utils/constants';
+import { Project } from '@utils/types';
 import Details from './details';
 import Landing from './landing';
 

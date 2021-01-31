@@ -34,6 +34,8 @@ export interface Project {
   github: string;
   category: string[];
   featured: boolean;
+  launch_video?: string;
+  url?: string;
 }
 
 // company
