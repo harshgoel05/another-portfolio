@@ -6,8 +6,7 @@ export const BASE_URL = `${process.env.BASE_URL}/api` || '/api';
 export async function getPersonalDetails(): Promise<PersonalDetails | boolean> {
   try {
     const { data } = await axios.get(`${BASE_URL}/me`);
-    console.log('In function getPersonalDetails', data);
-    return data;
+    return data.data;
   } catch (err) {
     return false;
   }
@@ -16,7 +15,6 @@ export async function getPersonalDetails(): Promise<PersonalDetails | boolean> {
 export async function getProjectDetails(): Promise<Project[] | boolean> {
   try {
     const { data } = await axios.get(`${BASE_URL}/projects`);
-    console.log('In function getProjectDetails', data);
     return data;
   } catch (err) {
     return false;
@@ -25,8 +23,6 @@ export async function getProjectDetails(): Promise<Project[] | boolean> {
 export async function getCompanyDetails(): Promise<Company[] | boolean> {
   try {
     const { data } = await axios.get(`${BASE_URL}/companies`);
-    console.log('In function getCompanyDetails', data);
-
     return data;
   } catch (err) {
     return false;
