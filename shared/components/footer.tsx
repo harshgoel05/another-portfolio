@@ -5,10 +5,10 @@ export default function Footer(): JSX.Element {
         <hr className="w-1/5 sm:w-1/4 lg:w-96 border-violet" />
         <p className="mx-3 md:mx-6 text-sm sm:text-7xl font-light">
           Made
-          <span role="img" aria-label="emoji" className="mx-3 animate-pulse">
+          <span role="img" aria-label="emoji" className="mx-2 animate-pulse">
             ❤️
           </span>
-          with by Harsh Goel
+          with by <span className="text-pink">Harsh Goel</span>
         </p>
         <hr className="w-1/5 sm:w-1/4 lg:w-96 border-violet" />
       </div>

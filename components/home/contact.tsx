@@ -23,7 +23,7 @@ export default function Contact(): JSX.Element {
             <img src="/images/vectors/contact.svg" alt="" className="w-3/4" />
           </div>
         </div>
-        <div className="flex justify-center items-center w-full z-40">
+        <div className="flex justify-center items-center w-full z-30">
           <Button
             type="solid"
             text="Let's Connect! 🚀 "

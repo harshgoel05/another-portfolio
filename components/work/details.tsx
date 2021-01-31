@@ -19,7 +19,7 @@ export default function Details(): JSX.Element {
                   numbering += 1;
                   return (
                     <div key={company.name}>
-                      <h1 className="text-1xl font-black text-white -mb-10 z-auto">
+                      <h1 className="text-1xl font-black text-white -mb-10 ">
                         {numbering >= 0 && numbering <= 9
                           ? `0${numbering - 1}`
                           : `${numbering - 1}`}
@@ -30,7 +30,7 @@ export default function Details(): JSX.Element {
                             ? 'bg-pink border-transparent'
                             : 'border-pink text-white'
                         } border-transparent border-2 rounded-xl 
-                    px-10 py-4 text-center z-40 w-60 lg:w-96
+                    px-10 py-4 text-center z-30 w-60 lg:w-96
                     transition-all hover:shadow-light-xl 
                     hover:outline-none active:outline-none focus:outline-none`}
                         onClick={() => {
