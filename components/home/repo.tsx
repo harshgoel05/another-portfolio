@@ -49,12 +49,8 @@ export default function RepoDetails(): JSX.Element {
                         <p className="ml-2 text-6xl ">{repoData.open_issues}</p>
                       </div>
                       <div className="flex justify-center items-center">
-                        <img src="/images/icons/watch.svg" alt="watch" className="h-6" />
-                        <p className="ml-2 text-6xl ">{repoData.watchers}</p>
-                      </div>
-                      <div className="flex justify-center items-center">
                         <img src="/images/icons/star.svg" alt="star" className="h-6" />
-                        <p className="ml-2 text-6xl ">{repoData.subscribers_count}</p>
+                        <p className="ml-2 text-6xl ">{repoData.watchers}</p>
                       </div>
                       <div className="flex justify-center items-center">
                         <img src="/images/icons/fork.svg" alt="fork" className="h-6" />
