@@ -2,7 +2,7 @@ import axios from 'axios';
 import { Company, PersonalDetails, Project } from './types';
 
 // FIXME change baseURL to production
-export const BASE_URL = 'http://localhost:3000/api';
+export const BASE_URL = process.env.DEV_ENV ? 'https://localhost:3000' : 'https://harshgoel.me/api';
 
 export async function getPersonalDetails(): Promise<PersonalDetails | boolean> {
   try {
