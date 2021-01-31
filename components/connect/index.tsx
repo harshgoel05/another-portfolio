@@ -1,7 +1,10 @@
 import { socialmedia } from '@constants';
+import { useContext } from 'react';
 import { InlineWidget } from 'react-calendly';
+import { PersonalDetailsContext } from 'shared/utils/contexts';
 
 export default function Connect(): JSX.Element {
+  const { calendyUrl } = useContext(PersonalDetailsContext);
   return (
     <>
       <div className="bg-blue pt-28 h-auto">
@@ -29,11 +32,11 @@ export default function Connect(): JSX.Element {
               </div>
             </div>
           </div>
-          <div className="ml-auto w-full px-4 lg:px-0 lg:w-5/12">
+          <div className="ml-auto w-full px-10 lg:px-20 lg:w-5/12 h-auto">
             <InlineWidget
-              styles={{ height: '600px', width: '80%', margin: 'auto' }}
+              styles={{ height: '600px', width: '100%', margin: 'auto' }}
               pageSettings={{ textColor: '#B8C1EC', primaryColor: '#B8C1EC' }}
-              url="https://calendly.com/harsh-goel05/web_meet?hide_event_type_details=1&hide_gdpr_banner=1"
+              url={calendyUrl}
             />
           </div>
         </div>

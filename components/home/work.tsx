@@ -45,7 +45,7 @@ export default function Work(): JSX.Element {
           <div className="col-span-12 md:col-span-5 lg:col-span-6 flex flex-col items-center justify-center">
             <img
               src={personalDetails.work.logo}
-              alt="SRMKZILLA"
+              alt="Works at"
               className="w-full p-10 sm:p-24 md:p-4 lg:p-24"
             />
           </div>

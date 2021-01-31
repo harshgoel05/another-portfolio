@@ -13,6 +13,7 @@ export default function Contact(): JSX.Element {
               <HeaderSmall text="Meet and Greet!" />
               <h1 className="w-4/5 mb-3 mt-1 text-7xl sm:text-5xl md:text-7xl lg:text-5xl font-normal tracking-wide text-white leading-normal">
                 Impressed Already? <span className="text-pink">Schedule</span> a call with him.
+                {/* Gender specific????? */}
               </h1>
               <h1 className="mb-3 mt-6 text-4xl sm:text-2xl md:text-3xl lg:text-2xl xl:text-1xl font-extrabold text-white leading-none ">
                 Let’s grab a cup of coffee.

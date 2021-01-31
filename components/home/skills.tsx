@@ -4,7 +4,7 @@ import SkillsIcons from './skills-icon';
 export default function Skills(): JSX.Element {
   return (
     <>
-      {/* FIXME Make skills dyanmic */}
+      {/* FIXME Make this whole page dyanmic */}
 
       <div className="relative h-auto py-10 lg:py-20" id="skills">
         <img

@@ -7,6 +7,7 @@ export interface PersonalDetails {
   work: Work;
   resume: string;
   profile_img: string;
+  calendyUrl: string;
 }
 
 export interface Work {
