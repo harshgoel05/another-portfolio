@@ -25,6 +25,6 @@ const Contact = ({ personalDetails }: Props): JSX.Element => {
 export default Contact;
 
 export async function getStaticProps(): Promise<{ props: { personalDetails: PersonalDetails } }> {
-  const personalDetails = await getPersonalDetails();
+  const personalDetails = (await getPersonalDetails()) as PersonalDetails;
   return { props: { personalDetails } };
 }

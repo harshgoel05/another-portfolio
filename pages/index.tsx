@@ -34,7 +34,7 @@ export default Home;
 export async function getStaticProps(): Promise<{
   props: { personalDetails: PersonalDetails; projectDetails: Project[] };
 }> {
-  const personalDetails = await getPersonalDetails();
-  const projectDetails = await getProjectDetails();
+  const personalDetails = (await getPersonalDetails()) as PersonalDetails;
+  const projectDetails = (await getProjectDetails()) as Project[];
   return { props: { personalDetails, projectDetails } };
 }
