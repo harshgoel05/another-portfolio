@@ -129,7 +129,6 @@ function MyApp({ Component, pageProps, router }: AppProps): JSX.Element {
         />
       </Head>
       <AnimatePresence>
-        <CustomCursor />
         <div className="page-transition-wrapper overflow-x-hidden min-h-screen">
           <motion.div
             transition={spring}
@@ -138,6 +137,7 @@ function MyApp({ Component, pageProps, router }: AppProps): JSX.Element {
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: -300, opacity: 0 }}
             id="page-transition-container">
+            <CustomCursor />
             <Component {...pageProps} key={router.pathname} />
           </motion.div>
         </div>
