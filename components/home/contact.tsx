@@ -5,7 +5,7 @@ export default function Contact(): JSX.Element {
   const router = useRouter();
   return (
     <>
-      <div className="relative h-auto py-10 lg:py-20">
+      <div className="relative h-auto py-10 lg:py-10">
         <div className="ml-4 sm:mx-12 md:mx-16 grid grid-cols-12 gap-4 h-auto place-items-center items-center">
           <div className="col-span-12 md:col-span-7 lg:col-span-6 flex flex-col justify-center items-center">
             {/* Hero Header */}

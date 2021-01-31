@@ -28,3 +28,12 @@ export async function getCompanyDetails(): Promise<Company[] | boolean> {
     return false;
   }
 }
+
+export async function getGithubDetails(): Promise<unknown> {
+  try {
+    const { data } = await axios.get(`https://api.github.com/repos/harshgoel05/another-portfolio`);
+    return data;
+  } catch (err) {
+    return false;
+  }
+}

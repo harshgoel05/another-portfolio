@@ -3,6 +3,7 @@ import Skills from './skills';
 import Work from './work';
 import Projects from './projects';
 import Contact from './contact';
+import RepoDetails from './repo';
 
 const HomePage = (): JSX.Element => {
   return (
@@ -14,6 +15,7 @@ const HomePage = (): JSX.Element => {
           <Work />
           <Projects />
           <Contact />
+          <RepoDetails />
         </div>
       </div>
     </>
