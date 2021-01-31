@@ -35,3 +35,15 @@ export interface Project {
   category: string[];
   featured: boolean;
 }
+
+// company
+
+export interface Company {
+  name: string;
+  logo_url?: string;
+  featured?: boolean;
+  position: string;
+  startDate: string;
+  endDate?: string;
+  responsibilities: string[];
+}

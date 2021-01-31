@@ -1,6 +1,6 @@
 import Connect from 'components/connect';
 import CustomCursor from 'shared/cursor';
-import { getPersonalDetails } from 'shared/utils/api';
+import { getPersonalDetails } from 'shared/utils/apiService';
 import { PersonalDetailsContext } from 'shared/utils/contexts';
 import { PersonalDetails } from 'shared/utils/types';
 import { Footer, Navbar } from '../shared/components';

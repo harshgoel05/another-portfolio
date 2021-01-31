@@ -1,8 +1,11 @@
-import { Project, projects } from '@constants';
 import { ProjectCard } from '@shared-components';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
+import { ProjectDetailsContext } from 'shared/utils/contexts';
+import { Project } from 'shared/utils/types';
 
 const ProjectsPage = (): JSX.Element => {
+  const projects = useContext(ProjectDetailsContext);
+
   const category = [{ value: 'all', label: 'ALL' }];
   projects.forEach((p) =>
     p.category.forEach((cat) => {

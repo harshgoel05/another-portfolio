@@ -1,4 +1,4 @@
-import { Project } from '@constants';
+import { Project } from 'shared/utils/constants';
 import { Button } from '@shared-components';
 import Tilt from 'react-tilt';
 

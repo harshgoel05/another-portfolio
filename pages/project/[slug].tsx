@@ -1,4 +1,4 @@
-import { Project, projects } from '@constants';
+import { Project, projects } from 'shared/utils/constants';
 import { Footer, Loader, Navbar, SocialBar } from '@shared-components';
 import { ProjectDetailedPage } from '@components';
 import { useRouter } from 'next/router';

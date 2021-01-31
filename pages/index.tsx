@@ -1,7 +1,7 @@
 import { Footer, Navbar, SocialBar } from '@shared-components';
 import dynamic from 'next/dynamic';
 import CustomCursor from 'shared/cursor';
-import { getPersonalDetails, getProjectDetails } from 'shared/utils/api';
+import { getPersonalDetails, getProjectDetails } from 'shared/utils/apiService';
 import { PersonalDetailsContext, ProjectDetailsContext } from 'shared/utils/contexts';
 import { PersonalDetails, Project } from 'shared/utils/types';
 
