@@ -15,7 +15,7 @@ export async function getPersonalDetails(): Promise<PersonalDetails | boolean> {
 export async function getProjectDetails(): Promise<Project[] | boolean> {
   try {
     const { data } = await axios.get(`${BASE_URL}/projects`);
-    return data.data;
+    return data;
   } catch (err) {
     return false;
   }
