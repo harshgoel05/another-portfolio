@@ -22,7 +22,7 @@ export default function Connect(): JSX.Element {
                   return (
                     <a href={link} key={link}>
                       <img
-                        src={`/images/icons/${image_file}.svg`}
+                        src={image_file}
                         alt={alt_text}
                         className="w-6 md:w-10 h-10 m-2 md:m-2 transition-all hover:opacity-40 transform hover:scale-75"
                       />
