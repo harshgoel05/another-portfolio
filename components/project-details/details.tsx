@@ -1,4 +1,5 @@
-import { Project, technologies } from '@constants';
+import { Project } from '@utils/types';
+import { technologies } from 'shared/utils/constants';
 
 type Props = {
   project: Project;

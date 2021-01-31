@@ -1,7 +1,9 @@
-import { RESUME_URL } from '@constants';
 import { Button, HeaderSmall } from '@shared-components';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/router';
+import { useContext } from 'react';
+import { PersonalDetailsContext } from 'shared/utils/contexts';
+import { PersonalDetails } from 'shared/utils/types';
 
 export default function Landing(): JSX.Element {
   const config = {
@@ -9,6 +11,7 @@ export default function Landing(): JSX.Element {
     damping: 10,
     stiffness: 80
   };
+  const personalDetails: PersonalDetails = useContext(PersonalDetailsContext);
   const router = useRouter();
   return (
     <>
@@ -38,13 +41,10 @@ export default function Landing(): JSX.Element {
               />
               <HeaderSmall text="Who is he?" />
               <h1 className="text-3xl sm:text-2xl xl:text-1xl font-extrabold text-white leading-none mb-3">
-                Harsh Goel
+                {personalDetails.name}
               </h1>
               <h5 className="text-7xl font-light text-violet text-justify">
-                He is a third year undergraduate. A fresher with experience, this line describles
-                him perfectly. And he is a full stack developer, but he can create beautiful apps as
-                well. His perfect balance of technical & managarial skills makes him apart from the
-                crowd.
+                {personalDetails.about}
               </h5>
               <div className="grid sm:grid-cols-2 md:grid-cols-none xl:grid-cols-2 gap-4 mt-6">
                 <div className="sm:col-span-1 xl:col-span-1">
@@ -58,7 +58,7 @@ export default function Landing(): JSX.Element {
                   <Button
                     type="outlined"
                     text="Download Resume"
-                    onClickHandler={() => window.open(RESUME_URL, '_blank')}
+                    onClickHandler={() => window.open(personalDetails.resume, '_blank')}
                   />
                 </div>
               </div>
@@ -66,9 +66,8 @@ export default function Landing(): JSX.Element {
           </div>
           <div className="hidden md:flex md:col-span-4 lg:col-span-6 text-justify text-white justify-end items-end ">
             <img
-              src="/images/profile.png"
-              alt="Harsh Goel Profile Img"
-              // className="md:w-80 lg:w-1/2 pointer-events-none"
+              src={personalDetails.profile_img}
+              alt="Profile"
               className="ml-auto w-4/5 pointer-events-none text-right "
             />
           </div>

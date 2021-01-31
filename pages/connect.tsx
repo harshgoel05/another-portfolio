@@ -1,14 +1,28 @@
-import Connect from 'components/connect';
-import CustomCursor from 'shared/cursor';
-import { Footer, Navbar } from '../shared/components';
+import { Connect } from '@components';
+import { getPersonalDetails } from '@utils/apiService';
+import { PersonalDetailsContext } from '@utils/contexts';
+import { PersonalDetails } from '@utils/types';
+import { Footer, Navbar } from '@shared-components';
 
-export default function Contact(): JSX.Element {
+type Props = {
+  personalDetails: PersonalDetails;
+};
+
+const Contact = ({ personalDetails }: Props): JSX.Element => {
   return (
     <>
-      <Navbar />
-      <Connect />
-      <CustomCursor />
-      <Footer />
+      <PersonalDetailsContext.Provider value={personalDetails}>
+        <Navbar />
+        <Connect />
+        <Footer />
+      </PersonalDetailsContext.Provider>
     </>
   );
+};
+
+export default Contact;
+
+export async function getStaticProps(): Promise<{ props: { personalDetails: PersonalDetails } }> {
+  const personalDetails = (await getPersonalDetails()) as PersonalDetails;
+  return { props: { personalDetails } };
 }

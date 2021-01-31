@@ -1,9 +1,12 @@
 /* eslint-disable react/no-array-index-key */
-import { companies, Company } from '@constants';
 import { HeaderSmall } from '@shared-components';
+import { useContext } from 'react';
+import { CompanyDetailsContext } from 'shared/utils/contexts';
+import { Company } from 'shared/utils/types';
 import Details from './details';
 
 export default function Landing(): JSX.Element {
+  const companyDetails: Company[] = useContext(CompanyDetailsContext);
   return (
     <>
       <div className="relative py-10 lg:py-20">
@@ -31,7 +34,7 @@ export default function Landing(): JSX.Element {
             </div>
           </div>
           <div className="col-span-12 md:col-span-5 lg:col-span-6 grid grid-cols-3 gap-4 lg:gap-14 my-10 sm:mt-0">
-            {companies.map(
+            {companyDetails.map(
               (company: Company, index): JSX.Element =>
                 company.logo_url && (
                   <img

@@ -1,11 +1,14 @@
-import { Project, projects as projectsList } from '@constants';
-import { Button, HeaderSmall, ProjectCard } from '@shared-components';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { useContext } from 'react';
 import TextCards from 'shared/components/text-cards';
+import { Button, HeaderSmall, ProjectCard } from '@shared-components';
+import { ProjectDetailsContext } from 'shared/utils/contexts';
+import { Project } from 'shared/utils/types';
 
 export default function Projects(): JSX.Element {
   const router = useRouter();
+  const projectDetails: Project[] = useContext(ProjectDetailsContext);
   return (
     <>
       <div>
@@ -25,6 +28,8 @@ export default function Projects(): JSX.Element {
                   className="block absolute right-0 top-0 w-20 md:w-16 lg:w-52 opacity-60"
                 />
                 <HeaderSmall text="Let’s walk the talk!" />
+                {/* TODO Add dynamic taglines */}
+
                 <h1 className="w-4/5 mb-3 mt-1 text-7xl sm:text-5xl md:text-7xl lg:text-4xl font-normal tracking-wide text-white leading-normal">
                   Some awesome <span className="text-pink font-bold">products</span> for the awesome
                   poeple
@@ -43,6 +48,7 @@ export default function Projects(): JSX.Element {
                 </div>
               </div>
             </div>
+            {/* FIXME Make thie cards of this page dyanmic */}
             <div className="relative col-span-12 md:col-span-5 lg:col-span-6 flex flex-col">
               <div className="w-64 h-auto shadow-light-xl hover:shadow-light-3xl transform transition-all duration-300 hover:scale-110">
                 <TextCards
@@ -70,7 +76,7 @@ export default function Projects(): JSX.Element {
         </div>
         <div className="relative h-auto sm:h-auto md:h-auto ml-4 sm:mx-12 md:mx-16" id="projects">
           <div className="grid md:grid-cols-2 gap-4 place-items-center">
-            {projectsList.map((project: Project) => (
+            {projectDetails.map((project: Project) => (
               <ProjectCard
                 project={project}
                 key={project.slug}

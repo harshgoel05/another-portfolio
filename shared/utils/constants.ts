@@ -1,3 +1,26 @@
+const navlinks = [
+  {
+    title: 'Home',
+    href: '/'
+  },
+  {
+    title: 'Explore',
+    href: '/#skills'
+  },
+  {
+    title: 'Work',
+    href: '/work'
+  },
+  {
+    title: 'Projects',
+    href: '/projects'
+  },
+  {
+    title: 'Contact',
+    href: '/connect'
+  }
+];
+
 const technologies = [
   {
     src: '/images/skills/mongodb.svg',
@@ -72,4 +95,5 @@ const technologies = [
     name: 'DiscordJS'
   }
 ];
-export default technologies;
+
+export { navlinks, technologies };
