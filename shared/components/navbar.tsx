@@ -49,7 +49,7 @@ const Navbar = (): JSX.Element => {
   }, []);
   const [showMobileNav, setShowMobileNav] = useState(false);
   return (
-    <div className={`${isScreenScrolled ? 'shadow-2xl' : ''} mx-auto bg-blue w-full fixed z-50`}>
+    <div className={`${isScreenScrolled ? 'shadow-2xl' : ''} mx-auto bg-blue w-full fixed z-30`}>
       <nav className="block md:flex justify-between items-center p-2 pl-5">
         {/* Navbar Logo */}
         <div className="flex justify-between">

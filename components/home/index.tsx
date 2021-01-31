@@ -4,8 +4,6 @@ import Work from './work';
 import Projects from './projects';
 import Contact from './contact';
 
-// ml-4 sm:mx-12 md:mx-16
-
 const HomePage = (): JSX.Element => {
   return (
     <>

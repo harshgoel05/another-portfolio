@@ -4,6 +4,7 @@ import { ProjectDetailedPage } from '@components';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import NotFound from '@pages/404';
+import CustomCursor from 'shared/cursor';
 
 const ProjectDetail = (): JSX.Element => {
   const router = useRouter();
@@ -23,11 +24,13 @@ const ProjectDetail = (): JSX.Element => {
         <ProjectDetailedPage project={project as Project} />
       </div>
       <SocialBar />
+      <CustomCursor />
       <Footer />
     </>
   ) : (
     <div>
       <NotFound />
+      <CustomCursor />
     </div>
   );
 };

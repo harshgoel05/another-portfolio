@@ -17,7 +17,7 @@ export default function CompanyDetails({ activeCompany }: Props): JSX.Element {
         <p className="italic text-sm lg:text-7xl">
           {company?.startDate} - {company?.endDate ? company?.endDate : 'Present'}
         </p>
-        <ul className="text-sm lg:text-7xl mt-8 list-disc ml-5 z-40 cursor-auto">
+        <ul className="text-sm lg:text-7xl mt-8 list-disc ml-5 z-30 cursor-auto">
           {company?.responsibilities.map((r) => {
             return <li key={r}>{r}</li>;
           })}

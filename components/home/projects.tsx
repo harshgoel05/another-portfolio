@@ -44,7 +44,7 @@ export default function Projects(): JSX.Element {
               </div>
             </div>
             <div className="relative col-span-12 md:col-span-5 lg:col-span-6 flex flex-col">
-              <div className="w-64 h-auto shadow-light-xl hover:shadow-light-3xl transform transition-all duration-300 hover:scale-110 z-auto">
+              <div className="w-64 h-auto shadow-light-xl hover:shadow-light-3xl transform transition-all duration-300 hover:scale-110">
                 <TextCards
                   heading="Websites"
                   text=" He adds certain special hidden recipes and making his websites look enticing."
@@ -58,7 +58,7 @@ export default function Projects(): JSX.Element {
                   color="pink"
                 />
               </div>
-              <div className="w-64 h-auto shadow-light-xl hover:shadow-light-3xl transform transition-all duration-300 hover:scale-110 z-auto">
+              <div className="w-64 h-auto shadow-light-xl hover:shadow-light-3xl transform transition-all duration-300 hover:scale-110">
                 <TextCards
                   heading="UI/UX"
                   text="He uses his outstanding engineering abilities to provide users an awesome interface and experience"
