@@ -3,7 +3,7 @@ export interface PersonalDetails {
   name: string;
   logo: string;
   about: string;
-  social_media: SocialMedia[];
+  socialMedia: SocialMedia[];
   work: Work;
   resume: string;
   profile_img: string;

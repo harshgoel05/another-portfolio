@@ -21,11 +21,11 @@ function SocialIcon({ alt_text, image_file, link }: Props): JSX.Element {
 }
 
 export default function SocialBar(): JSX.Element {
-  const personalDetails: PersonalDetails = useContext(PersonalDetailsContext);
+  const { socialMedia }: PersonalDetails = useContext(PersonalDetailsContext);
   return (
     <div className="fixed left-3 md:left-5 bottom-0 z-30">
       <div className="flex flex-col  justify-center items-center ">
-        {personalDetails.social_media.map((item) => {
+        {socialMedia.map((item) => {
           return (
             <SocialIcon
               link={item.link}

@@ -1,9 +1,9 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import axios from 'axios';
+import { PersonalDetails, Project } from './types';
 
 export const BASE_URL = 'http://localhost:3000/api';
 
-export async function getPersonalDetails(): Promise<any> {
+export async function getPersonalDetails(): Promise<PersonalDetails | boolean> {
   try {
     const { data } = await axios({
       method: 'get',
@@ -15,7 +15,7 @@ export async function getPersonalDetails(): Promise<any> {
   }
 }
 
-export async function getProjectDetails(): Promise<any> {
+export async function getProjectDetails(): Promise<Project[] | boolean> {
   try {
     const { data } = await axios({
       method: 'get',

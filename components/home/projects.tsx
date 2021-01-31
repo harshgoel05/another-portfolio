@@ -1,9 +1,8 @@
-// import { Project, projects as projectsList } from '@constants';
-import { Button, HeaderSmall, ProjectCard } from '@shared-components';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useContext } from 'react';
 import TextCards from 'shared/components/text-cards';
+import { Button, HeaderSmall, ProjectCard } from '@shared-components';
 import { ProjectDetailsContext } from 'shared/utils/contexts';
 import { Project } from 'shared/utils/types';
 

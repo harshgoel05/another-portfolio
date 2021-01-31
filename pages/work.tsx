@@ -6,7 +6,7 @@ const WorkPage = dynamic(() => import('../components/work/index'), {
   ssr: false
 });
 
-export default function Work(): JSX.Element {
+const Work = (): JSX.Element => {
   return (
     <>
       <Navbar />
@@ -15,4 +15,6 @@ export default function Work(): JSX.Element {
       <Footer />
     </>
   );
-}
+};
+
+export default Work;

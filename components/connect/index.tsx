@@ -1,10 +1,10 @@
-import { socialmedia } from '@constants';
 import { useContext } from 'react';
 import { InlineWidget } from 'react-calendly';
 import { PersonalDetailsContext } from 'shared/utils/contexts';
+import { PersonalDetails } from 'shared/utils/types';
 
 export default function Connect(): JSX.Element {
-  const { calendyUrl } = useContext(PersonalDetailsContext);
+  const { calendyUrl, socialMedia }: PersonalDetails = useContext(PersonalDetailsContext);
   return (
     <>
       <div className="bg-blue pt-28 h-auto">
@@ -18,7 +18,7 @@ export default function Connect(): JSX.Element {
                 Schedule a 30 minutes call with me via Google meet.
               </p>
               <div className="flex flex-row justify-center lg:justify-start items-end">
-                {socialmedia.map(({ alt_text, image_file, link }) => {
+                {socialMedia.map(({ alt_text, image_file, link }) => {
                   return (
                     <a href={link} key={link}>
                       <img

@@ -33,7 +33,7 @@ const NavItem = ({ href, title }: Props): JSX.Element => {
 };
 
 const Navbar = (): JSX.Element => {
-  const personalDetails: PersonalDetails = useContext(PersonalDetailsContext);
+  const { logo }: PersonalDetails = useContext(PersonalDetailsContext);
 
   const [isScreenScrolled, setisScreenScrolled] = useState(false);
 
@@ -60,7 +60,7 @@ const Navbar = (): JSX.Element => {
           <div>
             <Link href="/">
               <img
-                src={personalDetails.logo}
+                src={logo}
                 alt="e"
                 className={`${
                   isScreenScrolled ? 'w-1/5 md:w-3/12' : 'w-16 md:w-2/5'

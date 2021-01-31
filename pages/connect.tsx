@@ -9,7 +9,7 @@ type Props = {
   personalDetails: PersonalDetails;
 };
 
-export default function Contact({ personalDetails }: Props): JSX.Element {
+const Contact = ({ personalDetails }: Props): JSX.Element => {
   return (
     <>
       <PersonalDetailsContext.Provider value={personalDetails}>
@@ -20,7 +20,9 @@ export default function Contact({ personalDetails }: Props): JSX.Element {
       </PersonalDetailsContext.Provider>
     </>
   );
-}
+};
+
+export default Contact;
 
 export async function getStaticProps(): Promise<{ props: { personalDetails: PersonalDetails } }> {
   const personalDetails = await getPersonalDetails();
