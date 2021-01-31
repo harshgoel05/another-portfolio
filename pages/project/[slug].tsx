@@ -53,7 +53,6 @@ export async function getStaticProps(): Promise<{
 
 export async function getStaticPaths(): Promise<unknown> {
   const projectDetails = ((await getProjectDetails()) as Project[]) || [];
-  console.log(projectDetails);
   const paths = projectDetails.map((p) => {
     return { params: { slug: p.slug } };
   });
