@@ -1,5 +1,5 @@
 /* eslint-disable react/require-default-props */
-import { Project } from 'shared/utils/constants';
+import { Project } from '@utils/types';
 import Link from 'next/link';
 import Tilt from 'react-tilt';
 

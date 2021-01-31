@@ -2,9 +2,9 @@ import React, { useContext, useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Menu } from 'react-feather';
-import { navlinks } from 'shared/utils/constants';
-import { PersonalDetails } from 'shared/utils/types';
-import { PersonalDetailsContext } from 'shared/utils/contexts';
+import { navlinks } from '@utils/constants';
+import { PersonalDetails } from '@utils/types';
+import { PersonalDetailsContext } from '@utils/contexts';
 
 type Props = {
   href: string;

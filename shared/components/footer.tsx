@@ -1,6 +1,6 @@
 import { useContext } from 'react';
-import { PersonalDetailsContext } from 'shared/utils/contexts';
-import { PersonalDetails } from 'shared/utils/types';
+import { PersonalDetailsContext } from '@utils/contexts';
+import { PersonalDetails } from '@utils/types';
 
 export default function Footer(): JSX.Element {
   const personalDetails: PersonalDetails = useContext(PersonalDetailsContext);

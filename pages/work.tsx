@@ -1,10 +1,9 @@
 import dynamic from 'next/dynamic';
-import { Footer, Navbar } from '@shared-components';
 import CustomCursor from 'shared/cursor';
-import { getPersonalDetails, getCompanyDetails } from 'shared/utils/apiService';
-import { PersonalDetails } from 'shared/utils/types';
-import { Company } from 'shared/utils/constants';
-import { CompanyDetailsContext, PersonalDetailsContext } from 'shared/utils/contexts';
+import { Footer, Navbar } from '@shared-components';
+import { getPersonalDetails, getCompanyDetails } from '@utils/apiService';
+import { Company, PersonalDetails } from '@utils/types';
+import { CompanyDetailsContext, PersonalDetailsContext } from '@utils/contexts';
 
 const WorkPage = dynamic(() => import('../components/work/index'), {
   ssr: false

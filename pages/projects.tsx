@@ -1,9 +1,9 @@
 import dynamic from 'next/dynamic';
 import CustomCursor from 'shared/cursor';
-import { getPersonalDetails, getProjectDetails } from 'shared/utils/apiService';
-import { PersonalDetailsContext, ProjectDetailsContext } from 'shared/utils/contexts';
-import { PersonalDetails, Project } from 'shared/utils/types';
-import { Footer, Navbar, SocialBar } from '../shared/components';
+import { getPersonalDetails, getProjectDetails } from '@utils/apiService';
+import { PersonalDetailsContext, ProjectDetailsContext } from '@utils/contexts';
+import { PersonalDetails, Project } from '@utils/types';
+import { Footer, Navbar, SocialBar } from '@shared-components';
 
 const ProjectsPage = dynamic(() => import('../components/projects/index'), {
   ssr: false
