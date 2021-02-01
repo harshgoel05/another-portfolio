@@ -26,8 +26,8 @@ export default function CustomCursor(): JSX.Element {
   useEffect(() => {
     if (cursorRef.current == null || cursorRef == null) return;
     document.addEventListener('mousemove', mouseHoverHandler);
-    document.addEventListener('mouseout', removeMouseCursor);
-    document.addEventListener('mouseup', addMouseCursor);
+    document.addEventListener('mouseleave', removeMouseCursor);
+    document.addEventListener('mouseenter', addMouseCursor);
     document.addEventListener('click', clickHandler);
     return () => {
       document.removeEventListener('mousemove', mouseHoverHandler);
