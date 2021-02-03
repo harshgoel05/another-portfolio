@@ -1,19 +1,24 @@
-import { Connect } from '@components';
 import { getPersonalDetails } from '@utils/apiService';
 import { PersonalDetailsContext } from '@utils/contexts';
 import { PersonalDetails } from '@utils/types';
-import { Footer, Navbar } from '@shared-components';
+import { Footer, Loader, Navbar } from '@shared-components';
+import dynamic from 'next/dynamic';
 
 type Props = {
   personalDetails: PersonalDetails;
 };
+
+const ConnectPage = dynamic(() => import('../components/connect/index'), {
+  ssr: false,
+  loading: () => <Loader />
+});
 
 const Contact = ({ personalDetails }: Props): JSX.Element => {
   return (
     <>
       <PersonalDetailsContext.Provider value={personalDetails}>
         <Navbar />
-        <Connect />
+        <ConnectPage />
         <Footer />
       </PersonalDetailsContext.Provider>
     </>

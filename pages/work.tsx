@@ -1,11 +1,12 @@
 import dynamic from 'next/dynamic';
-import { Footer, Navbar } from '@shared-components';
+import { Footer, Loader, Navbar } from '@shared-components';
 import { getPersonalDetails, getCompanyDetails } from '@utils/apiService';
 import { Company, PersonalDetails } from '@utils/types';
 import { CompanyDetailsContext, PersonalDetailsContext } from '@utils/contexts';
 
 const WorkPage = dynamic(() => import('../components/work/index'), {
-  ssr: false
+  ssr: false,
+  loading: () => <Loader />
 });
 
 type Props = {

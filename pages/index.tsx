@@ -2,10 +2,11 @@ import dynamic from 'next/dynamic';
 import { getPersonalDetails, getProjectDetails } from '@utils/apiService';
 import { PersonalDetailsContext, ProjectDetailsContext } from '@utils/contexts';
 import { PersonalDetails, Project } from '@utils/types';
-import { Footer, Navbar, SocialBar } from '@shared-components';
+import { Footer, Loader, Navbar, SocialBar } from '@shared-components';
 
 const HomePage = dynamic(() => import('../components/home/index'), {
-  ssr: false
+  ssr: false,
+  loading: () => <Loader />
 });
 
 type Props = {

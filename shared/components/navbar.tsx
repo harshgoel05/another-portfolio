@@ -15,19 +15,21 @@ const NavItem = ({ href, title }: Props): JSX.Element => {
   const router = useRouter();
   return (
     <Link href={href}>
-      <li
-        className={`${
-          router.pathname === href ? 'border-b-2 md:border-none' : ''
-        } px-5 py-2 pt-1 md:pt-4`}>
-        <p className="transition duration-500 ease-in-out transform md:hover:-translate-y-2 text-white font-bold md:hover:text-violet">
-          {title}
-        </p>
-        <img
-          src="/images/vectors/nav_active.svg"
-          alt="nav-active"
-          className={router.pathname === href ? 'hidden md:block md:w-100' : 'hidden'}
-        />
-      </li>
+      <a>
+        <li
+          className={`${
+            router.pathname === href ? 'border-b-2 md:border-none' : ''
+          } px-5 py-2 pt-1 md:pt-4`}>
+          <p className="transition duration-500 ease-in-out transform md:hover:-translate-y-2 text-white font-bold md:hover:text-violet">
+            {title}
+          </p>
+          <img
+            src="/images/vectors/nav_active.svg"
+            alt="nav-active"
+            className={router.pathname === href ? 'hidden md:block md:w-100' : 'hidden'}
+          />
+        </li>
+      </a>
     </Link>
   );
 };

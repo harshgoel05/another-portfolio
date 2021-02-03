@@ -3,7 +3,8 @@
 import { AppProps } from 'next/dist/next-server/lib/router/router';
 import '../styles/global.css';
 import Head from 'next/head';
-import Router from 'next/router';
+// import Router from 'next/router';
+// import { useEffect } from 'react';
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import CustomCursor from 'shared/cursor';
@@ -13,21 +14,20 @@ function MyApp({ Component, pageProps, router }: AppProps): JSX.Element {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
     setLoading(false);
-    const handleStart = (url) => url !== Router.asPath && setLoading(true);
-
-    const handleComplete = (url) => url !== Router.asPath && setLoading(false);
-
-    Router.events.on('routeChangeStart', handleStart);
-    Router.events.on('routeChangeComplete', handleComplete);
-    Router.events.on('routeChangeError', handleComplete);
-
-    return () => {
-      Router.events.off('routeChangeStart', handleStart);
-      Router.events.off('routeChangeComplete', handleComplete);
-      Router.events.off('routeChangeError', handleComplete);
-    };
+    // const handleStart = (url) => url !== Router.asPath && setLoading(true);
+    // const handleComplete = (url) => {
+    //   if (url !== Router.asPath) setLoading(false);
+    //   // window.scrollTo(0, 0);
+    // };
+    // Router.events.on('routeChangeStart', handleStart);
+    // Router.events.on('routeChangeComplete', handleComplete);
+    // Router.events.on('routeChangeError', handleComplete);
+    // return () => {
+    //   Router.events.off('routeChangeStart', handleStart);
+    //   Router.events.off('routeChangeComplete', handleComplete);
+    //   Router.events.off('routeChangeError', handleComplete);
+    // };
   });
   const spring = {
     type: 'spring',
@@ -35,9 +35,6 @@ function MyApp({ Component, pageProps, router }: AppProps): JSX.Element {
     stiffness: 100,
     when: 'afterChildren'
   };
-  if (loading) {
-    return <Loader />;
-  }
   const disableConsole = () => {
     console.log(
       '%c No, no! Well! I guess we have same intrest, :)',
@@ -66,6 +63,9 @@ function MyApp({ Component, pageProps, router }: AppProps): JSX.Element {
   };
 
   if (process.env.ENV === 'production') disableConsole();
+  if (loading) {
+    return <Loader />;
+  }
   return (
     <div>
       <Head>
