@@ -1,11 +1,9 @@
-import { Button, HeaderSmall } from '@shared-components';
-import { useRouter } from 'next/router';
+import { HeaderSmall } from '@shared-components';
 import { useEffect, useState } from 'react';
 import { getGithubDetails } from '@utils/apiService';
 import Tilt from 'react-tilt';
 
 export default function RepoDetails(): JSX.Element {
-  const router = useRouter();
   const [repoData, setRepoData] = useState(undefined);
   useEffect(() => {
     getGithubDetails().then((result) => {
@@ -27,13 +25,12 @@ export default function RepoDetails(): JSX.Element {
               <h1 className="mb-3 mt-6 text-4xl sm:text-2xl md:text-3xl lg:text-2xl xl:text-1xl font-extrabold text-white leading-none ">
                 Fork this on Github
               </h1>
-              <div className="mt-6">
-                <Button
-                  type="solid"
-                  text="Know More"
-                  onClickHandler={() => router.push('#skills')}
-                />
-              </div>
+              <p className="italic text-purple-50 text-sm">
+                *Credits to the owners for the vectors/icons used. These are picked from various
+                sources from the internet. <br />
+                *Feel free to fork and make this repo your own, but make sure to give credits to
+                <a href="https://harshgoelme">the owner</a>
+              </p>
             </div>
           </div>
           {repoData && (
