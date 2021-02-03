@@ -27,13 +27,21 @@ export default function RepoDetails(): JSX.Element {
               <h1 className="mb-3 mt-6 text-4xl sm:text-2xl md:text-3xl lg:text-2xl xl:text-1xl font-extrabold text-white leading-none ">
                 Fork this on Github
               </h1>
-              <div className="mt-6">
+              {/* <div className="mt-6">
                 <Button
                   type="solid"
-                  text="Know More"
-                  onClickHandler={() => router.push('#skills')}
+                  text="View Repository"
+                  onClickHandler={() =>
+                    window.open('https://github.com/harshgoel05/another-portfolio', '_blank')
+                  }
                 />
-              </div>
+              </div> */}
+              <p className="italic text-purple-50 text-sm">
+                *Credits to the owners for the vectors/icons used. These are picked from various
+                sources from the internet. <br />
+                *Feel free to fork and make this repo your own, but make sure to give credits to
+                https://harshgoel.me
+              </p>
             </div>
           </div>
           {repoData && (

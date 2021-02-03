@@ -2,10 +2,9 @@ import { MongoClient } from 'mongodb';
 import { NextApiRequest, NextApiResponse } from 'next';
 import { getDbClient } from '../../api/utils/db';
 
-let dbClient: MongoClient;
 export default async (req: NextApiRequest, res: NextApiResponse): Promise<void> => {
   try {
-    dbClient = await getDbClient();
+    const dbClient: MongoClient = await getDbClient();
     const data = await dbClient.db().collection('companies').find({}).project({ _id: 0 }).toArray();
     res.statusCode = 200;
     res.json(data);
