@@ -66,9 +66,9 @@ export default function Landing(): JSX.Element {
           </div>
           <div className="hidden md:flex md:col-span-4 lg:col-span-6 text-justify text-white justify-end items-end ">
             <img
-              src={personalDetails.profile_img}
-              alt="Profile"
-              className="ml-auto w-4/5 pointer-events-none text-right "
+              src="/images/harsh_goel.svg"
+              alt="Harsh Goel"
+              className="ml-auto w-3/5 pointer-events-none text-right z-40 "
             />
           </div>
         </div>

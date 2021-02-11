@@ -71,6 +71,8 @@ function MyApp({ Component, pageProps, router }: AppProps): JSX.Element {
       <Head>
         <title>Harsh Goel | Software Developer</title>
         <meta name="title" content="Harsh Goel | Software Developer" />
+
+        <title>Harsh Goel | Software Developer</title>
         <meta
           name="description"
           content="Harsh Goel is a Software Developer from Dhanbad, Jharkhand. Harsh is pursuing his undergraduate from SRM University, Chennai."
@@ -84,7 +86,8 @@ function MyApp({ Component, pageProps, router }: AppProps): JSX.Element {
         <meta name="language" content="English" />
         <meta name="revisit-after" content="10 days" />
         <meta name="author" content="Harsh Goel" />
-        <meta name="copyright" content="All rights reserved,2020. Harsh Goel" />
+        <meta name="copyright" content="All rights reserved,2021. Harsh Goel" />
+        <meta httpEquiv="content-language" content="en" />
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
