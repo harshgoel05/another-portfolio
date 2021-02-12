@@ -31,7 +31,7 @@ export default function Landing(): JSX.Element {
         animate={{ scale: 1, opacity: 1, transitionDuration: '0.2s' }}
         exit={{ x: 0, opacity: 0 }}>
         <div className="grid grid-cols-12 gap-4 h-84.5vh ml-4 sm:mx-12 md:mx-16">
-          <div className="col-span-12 md:col-span-8 lg:col-span-6 flex flex-col justify-center items-center">
+          <div className="col-span-12 md:col-span-7 lg:col-span-6 flex flex-col justify-center items-center">
             {/* Hero Header */}
             <div className="items-center w-3/4 -mt-10 relative">
               <img
@@ -64,11 +64,11 @@ export default function Landing(): JSX.Element {
               </div>
             </div>
           </div>
-          <div className="hidden md:flex md:col-span-4 lg:col-span-6 text-justify text-white justify-end items-end ">
+          <div className="hidden md:flex md:col-span-5 lg:col-span-6 text-justify text-white justify-end items-end ">
             <img
-              src="/images/harsh_goel.svg"
+              src="/images/1.png"
               alt="Harsh Goel"
-              className="ml-auto w-3/5 pointer-events-none text-right z-40 "
+              className="ml-auto w-100 lg:w-3/5 pointer-events-none text-right"
             />
           </div>
         </div>

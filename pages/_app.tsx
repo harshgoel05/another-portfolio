@@ -63,16 +63,12 @@ function MyApp({ Component, pageProps, router }: AppProps): JSX.Element {
   };
 
   if (process.env.ENV === 'production') disableConsole();
-  if (loading) {
-    return <Loader />;
-  }
+
   return (
     <div>
       <Head>
         <title>Harsh Goel | Software Developer</title>
         <meta name="title" content="Harsh Goel | Software Developer" />
-
-        <title>Harsh Goel | Software Developer</title>
         <meta
           name="description"
           content="Harsh Goel is a Software Developer from Dhanbad, Jharkhand. Harsh is pursuing his undergraduate from SRM University, Chennai."
@@ -97,7 +93,10 @@ function MyApp({ Component, pageProps, router }: AppProps): JSX.Element {
           property="og:description"
           content="Harsh Goel is a Software Developer from Dhanbad, Jharkhand. Harsh is pursuing his undergraduate from SRM University, Chennai."
         />
-        <meta property="og:image" content="./src/img/harsh-banner.png" />
+        <meta
+          property="og:image"
+          content="https://billboard.srmkzilla.net/api/blog?title=Harsh%20Goel&subtitle=Software%20Developer&fileType=jpeg&theme=dark&fontSize=180px"
+        />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
@@ -131,20 +130,24 @@ function MyApp({ Component, pageProps, router }: AppProps): JSX.Element {
           }}
         />
       </Head>
-      <AnimatePresence>
-        <div className="page-transition-wrapper overflow-x-hidden min-h-screen">
-          <motion.div
-            transition={spring}
-            key={router.pathname}
-            initial={{ x: 300, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            exit={{ x: -300, opacity: 0 }}
-            id="page-transition-container">
-            <CustomCursor />
-            <Component {...pageProps} key={router.pathname} />
-          </motion.div>
-        </div>
-      </AnimatePresence>
+      {loading ? (
+        <Loader />
+      ) : (
+        <AnimatePresence>
+          <div className="page-transition-wrapper overflow-x-hidden min-h-screen">
+            <motion.div
+              transition={spring}
+              key={router.pathname}
+              initial={{ x: 300, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: -300, opacity: 0 }}
+              id="page-transition-container">
+              <CustomCursor />
+              <Component {...pageProps} key={router.pathname} />
+            </motion.div>
+          </div>
+        </AnimatePresence>
+      )}
     </div>
   );
 }
