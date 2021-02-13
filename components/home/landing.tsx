@@ -58,7 +58,8 @@ export default function Landing(): JSX.Element {
                   <Button
                     type="outlined"
                     text="Download Resume"
-                    onClickHandler={() => window.open(personalDetails.resume, '_blank')}
+                    // eslint-disable-next-line no-return-assign
+                    onClickHandler={() => (window.location.href = '/RESUME.pdf')}
                   />
                 </div>
               </div>

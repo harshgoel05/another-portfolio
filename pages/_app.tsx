@@ -62,8 +62,6 @@ function MyApp({ Component, pageProps, router }: AppProps): JSX.Element {
     console.error = () => {};
   };
 
-  if (process.env.ENV === 'production') disableConsole();
-
   return (
     <div>
       <Head>
@@ -101,6 +99,7 @@ function MyApp({ Component, pageProps, router }: AppProps): JSX.Element {
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://harshgoel.me/" />
+        <meta property="twitter:site" content="@harshgoel05" />
         <meta property="twitter:title" content="Harsh Goel | Software Developer" />
         <meta
           property="twitter:description"
@@ -148,6 +147,7 @@ function MyApp({ Component, pageProps, router }: AppProps): JSX.Element {
           </div>
         </AnimatePresence>
       )}
+      {disableConsole()}
     </div>
   );
 }
