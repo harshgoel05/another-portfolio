@@ -23,9 +23,9 @@ export default function RepoDetails(): JSX.Element {
                 {/* Gender specific????? */}
               </h1>
               <h1 className="mb-3 mt-6 text-4xl sm:text-2xl md:text-3xl lg:text-2xl xl:text-1xl font-extrabold text-white leading-none ">
-                Fork this on Github
+                Visit Github Repository
               </h1>
-              <p className="italic text-purple-50 text-sm">
+              <p className="italic text-purple-50 text-sm mt-8">
                 *Credits to the owners for the vectors/icons used. These are picked from various
                 sources from the internet. <br />
                 *Feel free to fork and make this repo your own, but make sure to give credits to

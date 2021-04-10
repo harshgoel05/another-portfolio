@@ -37,7 +37,7 @@ function MyApp({ Component, pageProps, router }: AppProps): JSX.Element {
   };
   const disableConsole = () => {
     console.log(
-      '%c No, no! Well! I guess we have same intrest, :)',
+      '%c This place is where I was supposed to post job openings, but currently I need one :P , :)',
       'background: #212121; color: #f69510; padding: 6px; '
     );
     console.log(`

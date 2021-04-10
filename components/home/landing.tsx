@@ -59,7 +59,7 @@ export default function Landing(): JSX.Element {
                     type="outlined"
                     text="Download Resume"
                     // eslint-disable-next-line no-return-assign
-                    onClickHandler={() => (window.location.href = '/RESUME.pdf')}
+                    onClickHandler={() => window.open(personalDetails.resume, '_blank')}
                   />
                 </div>
               </div>
@@ -67,9 +67,9 @@ export default function Landing(): JSX.Element {
           </div>
           <div className="hidden md:flex md:col-span-5 lg:col-span-6 text-justify text-white justify-end items-end ">
             <img
-              src="/images/1.png"
+              src={personalDetails.profile_img}
               alt="Harsh Goel"
-              className="ml-auto w-100 lg:w-3/5 pointer-events-none text-right"
+              className="ml-auto w-100 lg:w-4/5 pointer-events-none text-right"
             />
           </div>
         </div>
