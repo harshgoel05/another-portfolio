@@ -7,7 +7,7 @@ export default function Connect(): JSX.Element {
   const { calendyUrl, socialMedia }: PersonalDetails = useContext(PersonalDetailsContext);
   return (
     <>
-      <div className="bg-blue pt-28 h-auto">
+      <div className="bg-blue pt-28 h-auto min-h-screen">
         <div className="flex flex-col lg:flex-row justify-center items-center">
           <div className="w-full text-center lg:w-7/12 lg:text-left pl-0 lg:pl-20">
             <div className="w-full lg:w-2/3">

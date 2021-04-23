@@ -10,6 +10,7 @@ body {
   font-family: 'Poppins', sans-serif;
   cursor: none;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 *:hover,
 *:active,
