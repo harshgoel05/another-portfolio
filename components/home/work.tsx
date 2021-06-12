@@ -24,8 +24,8 @@ export default function Work(): JSX.Element {
                 className="block absolute right-0 top-0 w-20 md:w-16 lg:w-52 opacity-60"
               />
               <HeaderSmall text="What does he do?" />
-              <h1 className="w-4/5 mb-3 mt-1 text-7xl sm:text-5xl md:text-7xl lg:text-4xl font-normal tracking-wide text-white leading-normal">
-                Currently building things at{' '}
+              <h1 className="mb-3 mt-1 text-7xl sm:text-5xl md:text-7xl lg:text-4xl font-normal tracking-wide text-white leading-normal">
+                Currently building beautiful things at{' '}
                 <span className="text-pink font-bold">{personalDetails.work.company}</span> as
               </h1>
               <h1 className="mb-3 mt-6 text-4xl sm:text-2xl md:text-3xl lg:text-2xl xl:text-1xl font-extrabold text-white leading-none ">
