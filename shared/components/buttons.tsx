@@ -15,8 +15,8 @@ export default function Button({ text, type, onClickHandler = () => {} }: Props)
                     hover:shadow-light-xl
                     ${
                       type === 'solid'
-                        ? 'bg-pink text-blue hover:outline-none hover:bg-transparent hover:text-pink hover:border-pink focus:outline-none focus:bg-transparent focus:text-pink focus:border-pink'
-                        : 'text-pink bg-transparent border-pink hover:outline-none hover:bg-pink hover:text-blue hover:border-pink focus:outline-none focus:bg-pink focus:text-blue focus:border-pink'
+                        ? 'bg-pink text-blue hover:outline-none hover:bg-transparent hover:text-pink hover:border-pink focus:outline-none'
+                        : 'text-pink bg-transparent border-pink hover:outline-none hover:bg-pink hover:text-blue hover:border-pink focus:outline-none'
                     }
                    `}>
         {text}
