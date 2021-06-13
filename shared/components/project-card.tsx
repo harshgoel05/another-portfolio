@@ -26,7 +26,7 @@ const ProjectCard = ({ project, filter }: Props): JSX.Element => {
       <>
         <Tilt className="Tilt" options={{ max: 25 }}>
           <div
-            className="m-10 lg:mx-16 rounded-2xl
+            className="my-4 mx-8 lg:mx-16 rounded-2xl
             transition-all duration-300 transform hover:opacity-80 hover:shadow-violet-5xl">
             <Link href={`/project/${project.slug}`}>
               <img src={project.img} alt={project.name} className="rounded-2xl" />

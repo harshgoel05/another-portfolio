@@ -50,7 +50,7 @@ export default function Landing({ project }: Props): JSX.Element {
         <div className="col-span-12 flex md:col-span-4 lg:col-span-6 items-center justify-items-center">
           <Tilt className="Tilt" options={{ max: 25 }}>
             <div
-              className="m-10 md:m-0 lg:m-10 lg:mx-16 rounded-2xl
+              className="my-4 mx-8 md:m-0 lg:m-10 lg:mx-16 rounded-2xl
             transition-all duration-300 transform hover:opacity-80 hover:shadow-violet-5xl">
               <img src={project.img} alt={project.name} className="rounded-2xl" />
             </div>

@@ -43,7 +43,8 @@ const ProjectsPage = (): JSX.Element => {
                       active === c.value
                         ? 'text-blue bg-pink border-transparent'
                         : 'text-white border-pink'
-                    } border-2 py-2 px-6 rounded-xl mx-4 outline-none mb-2 focus:outline-none transition-all hover:shadow-light-3xl
+                    } w-32 mx-4
+                    border-2 py-2 rounded-xl lg:mx-4 outline-none mb-2 focus:outline-none transition-all hover:shadow-light-3xl
                     `}>
                     {c.label}
                   </button>

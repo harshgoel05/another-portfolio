@@ -46,7 +46,7 @@ export default function Work(): JSX.Element {
             <img
               src={personalDetails.work.logo}
               alt="Works at"
-              className="w-full p-10 sm:p-24 md:p-4 lg:p-24"
+              className="w-48 lg:w-full p-10 sm:p-24 md:p-4 lg:p-24"
             />
           </div>
         </div>
