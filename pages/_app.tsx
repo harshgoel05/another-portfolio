@@ -7,7 +7,7 @@ import Head from 'next/head';
 // import { useEffect } from 'react';
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import CustomCursor from 'shared/cursor';
+// import CustomCursor from 'shared/cursor';
 import Loader from '../shared/components/loader';
 
 function MyApp({ Component, pageProps, router }: AppProps): JSX.Element {
@@ -126,6 +126,32 @@ function MyApp({ Component, pageProps, router }: AppProps): JSX.Element {
               gtag('js', new Date());
             
               gtag('config', 'G-2595CLJE11');`
+          }}
+        />
+        {/* <script>
+          dangerouslySetInnerHTML=
+          {{
+            __html: `(function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:2472275,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`
+          }}
+        </script> */}
+
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(h,o,t,j,a,r){
+              h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+              h._hjSettings={hjid:2472275,hjsv:6};
+              a=o.getElementsByTagName('head')[0];
+              r=o.createElement('script');r.async=1;
+              r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+              a.appendChild(r);
+          })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`
           }}
         />
       </Head>
