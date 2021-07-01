@@ -25,8 +25,8 @@ export default function Work(): JSX.Element {
               />
               <HeaderSmall text="What does he do?" />
               <h1 className="mb-3 mt-1 text-7xl sm:text-5xl md:text-7xl lg:text-4xl font-normal tracking-wide text-white leading-normal">
-                Currently building beautiful things at{' '}
-                <span className="text-pink font-bold">{personalDetails.work.company}</span> as
+                Currently building beautiful products at{' '}
+                <span className="text-pink font-bold">{personalDetails.work.company}</span> as a
               </h1>
               <h1 className="mb-3 mt-6 text-4xl sm:text-2xl md:text-3xl lg:text-2xl xl:text-1xl font-extrabold text-white leading-none ">
                 {personalDetails.work.designation}
