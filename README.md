@@ -4,7 +4,7 @@
 
 <br>
 <p align="center">
-Porfolio V3
+Another Porfolio
 </p>
 <p align="center">
 crafted with <span style="color: #8b0000;">&hearts;</span> by <a href="https://harshgoel.me">Harsh Goel</a>.
@@ -17,7 +17,7 @@ crafted with <span style="color: #8b0000;">&hearts;</span> by <a href="https://h
     <img src="https://img.shields.io/badge/author-Harsh%20Goel-orange" alt="author Harsh Goel"/>
 </p>
 
-> The 3<sup>rd</sup> version of his portfolio website.
+>Harsh's Developer Portfolio built on NextJS!
 
 ## Built With
 
