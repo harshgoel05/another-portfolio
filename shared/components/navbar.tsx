@@ -66,7 +66,7 @@ const Navbar = (): JSX.Element => {
                 alt="logo"
                 className={`${
                   isScreenScrolled ? 'w-1/5 md:w-3/12' : 'w-16 md:w-2/5'
-                } pl-30 my-2 transition-all transform hover:scale-75`}
+                } pl-30 my-2 transition-all transform hover:scale-75 cursor-pointer`}
               />
             </Link>
           </div>
