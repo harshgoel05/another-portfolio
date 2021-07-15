@@ -17,16 +17,20 @@ const NavItem = ({ href, title }: Props): JSX.Element => {
     <Link href={href}>
       <a>
         <li
-          className={`${
-            router.pathname === href ? 'border-b-2 md:border-none' : ''
-          } px-5 py-2 pt-1 md:pt-4`}>
+          className={`
+          px-5 py-2 pt-1 md:pt-4
+          ${router.pathname === href ? 'border-b-2 md:border-none' : ''} 
+          `}>
           <p className="transition duration-500 ease-in-out transform md:hover:-translate-y-2 text-white font-bold md:hover:text-violet">
             {title}
           </p>
           <img
             src="/images/vectors/nav_active.svg"
             alt="nav-active"
-            className={router.pathname === href ? 'hidden md:block md:w-100' : 'hidden'}
+            className={`
+            hidden 
+            ${router.pathname === href && 'md:block md:w-100'}
+            `}
           />
         </li>
       </a>
@@ -36,15 +40,11 @@ const NavItem = ({ href, title }: Props): JSX.Element => {
 
 const Navbar = (): JSX.Element => {
   const { logo }: PersonalDetails = useContext(PersonalDetailsContext);
-
+  const [showMobileNav, setShowMobileNav] = useState(false);
   const [isScreenScrolled, setisScreenScrolled] = useState(false);
-
   const addShadowtoNav = () => {
-    if (window.scrollY >= 100) {
-      setisScreenScrolled(true);
-    } else {
-      setisScreenScrolled(false);
-    }
+    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+    window.scrollY >= 100 ? setisScreenScrolled(true) : setisScreenScrolled(false);
   };
 
   useEffect(() => {
@@ -53,11 +53,13 @@ const Navbar = (): JSX.Element => {
       window.removeEventListener('scroll', addShadowtoNav);
     };
   }, []);
-  const [showMobileNav, setShowMobileNav] = useState(false);
+
   return (
-    <div className={`${isScreenScrolled ? 'shadow-2xl' : ''} mx-auto bg-blue w-full fixed z-30`}>
-      <nav className="block md:flex justify-between items-center p-2 pl-5">
-        {/* Navbar Logo */}
+    <div
+      className={` mx-auto bg-blue w-full fixed z-30
+      ${isScreenScrolled && 'shadow-2xl'}
+      `}>
+      <nav className="block md:flex justify-between items-center p-2 px-8">
         <div className="flex justify-between">
           <div>
             <Link href="/">
@@ -70,7 +72,7 @@ const Navbar = (): JSX.Element => {
               />
             </Link>
           </div>
-          <div className="flex md:hidden mr-6">
+          <div className="flex md:hidden">
             <button
               type="button"
               className="text-white focus:outline-none"
@@ -79,9 +81,8 @@ const Navbar = (): JSX.Element => {
             </button>
           </div>
         </div>
-        <div className={showMobileNav ? 'block pt-3 transition-all' : 'hidden md:block '}>
-          {/* Navbar Items */}
-          <ul className="md:flex md:flex-row pr-10 border-pink border-2 md:border-none">
+        <div className={showMobileNav ? 'block pt-3 transition-all' : 'hidden md:block'}>
+          <ul className="md:flex md:flex-row border-pink border-2 md:border-none">
             {navlinks.map((item) => {
               return <NavItem title={item.title} href={item.href} key={item.href} />;
             })}
