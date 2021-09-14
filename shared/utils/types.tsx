@@ -49,3 +49,8 @@ export interface Company {
   endDate?: string;
   responsibilities: string[];
 }
+
+export interface Skill {
+  name: string;
+  src: string;
+}

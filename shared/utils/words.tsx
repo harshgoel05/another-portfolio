@@ -36,7 +36,7 @@ const words = [
     value: 54
   },
   {
-    text: 'Insolvers',
+    text: 'Heiphen',
     value: 54
   },
   {

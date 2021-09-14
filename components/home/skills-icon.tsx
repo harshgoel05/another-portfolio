@@ -1,59 +1,12 @@
+import SKILLS from '@utils/skills';
+import { Skill } from '@utils/types';
+
 export default function SkillsIcons(): JSX.Element {
   return (
-    <div className="flex flex-col items-center justify-center lg:mt-16">
-      {/* Add Logos of Technologies */}
-      <div className="flex items-center justify-center">
-        <img
-          src="/images/skills/mongodb.svg"
-          alt="MongoDB"
-          className="p-2 sm:p-6 w-1/5 sm:w-36 md:w-32"
-        />
-        <img
-          src="/images/skills/node.svg"
-          alt="NodeJS"
-          className="p-2 sm:p-6 w-1/5 sm:w-36 md:w-32"
-        />
-        <img
-          src="/images/skills/react.svg"
-          alt="ReactJS"
-          className="p-2 sm:p-6 w-1/5 sm:w-36 md:w-32"
-        />
-      </div>
-      <div className="flex items-center justify-center">
-        <img
-          src="/images/skills/js.svg"
-          alt="Javascript"
-          className="p-2 sm:p-6 w-1/5 sm:w-36 md:w-32"
-        />
-        <img
-          src="/images/skills/ts.svg"
-          alt="Typescript"
-          className="p-2 sm:p-6 w-1/5 sm:w-36 md:w-32"
-        />
-        <img
-          src="/images/skills/react-native.svg"
-          alt="React Native"
-          className="p-2 sm:p-6 w-1/5 sm:w-36 md:w-32"
-        />
-        <img
-          src="/images/skills/angular.svg"
-          alt="AngularJS"
-          className="p-2 sm:p-6 w-1/5 sm:w-36 md:w-32"
-        />
-      </div>
-      <div className="flex items-center justify-center">
-        <img
-          src="/images/skills/express.svg"
-          alt="ExpressJS"
-          className="p-2 sm:p-6 w-1/5 sm:w-36 md:w-32"
-        />
-        <img
-          src="/images/skills/figma.svg"
-          alt="Figma"
-          className="p-2 sm:p-6 w-1/5 sm:w-36 md:w-32"
-        />
-        <img src="/images/skills/git.svg" alt="Git" className="p-2 sm:p-6 w-1/5 sm:w-36 md:w-32" />
-      </div>
+    <div className="flex items-center justify-center lg:mt-16 flex-wrap w-5/6 md:w-full xl:w-5/6">
+      {SKILLS.map(({ src, name }: Skill) => {
+        return <img src={src} alt={name} key={src} className="p-2 sm:p-6 h-16 sm:h-24" />;
+      })}
     </div>
   );
 }
