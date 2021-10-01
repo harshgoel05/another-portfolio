@@ -17,7 +17,7 @@ crafted with <span style="color: #8b0000;">&hearts;</span> by <a href="https://h
     <img src="https://img.shields.io/badge/author-Harsh%20Goel-orange" alt="author Harsh Goel"/>
 </p>
 
->Harsh's Developer Portfolio built on NextJS!
+> Harsh's Developer Portfolio built on NextJS!
 
 ## Built With
 
@@ -70,6 +70,16 @@ $ yarn format
 `Portfolio` is available under the MIT license. See the LICENSE file for more info.
 
 ## Contributing 🤝
+
+1. Find an issue to work on from [here](https://github.com/harshgoel05/another-portfolio/issues)
+2. Ask the owner/maintainer for permission to work on the issue.
+3. Fork this repository. [For help, click here](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
+4. Clone the forked repository in your local machine [For help, click here](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
+5. Create a new branch [For help, click here](https://github.com/Kunena/Kunena-Forum/wiki/Create-a-new-branch-with-git-and-manage-branches)
+6. Add and commit your changes to the new branch [For help, click here](https://stackoverflow.com/questions/14655816/how-to-commit-changes-to-another-pre-existent-branch#:~:text=First%2C%20checkout%20to%20your%20new,show%20up%20on%20the%20remote.)
+7. Please use [GitMoji](https://gitmoji.dev/) for all commits that you make.
+8. Create a Pull Request, add proper description, screenshots, comments and ask a review from owner/maintainer [For help, click here](https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork)
+9. The owner/developer will merge the Pull Request if it aligns with the practises we follow and is valid. One should not merge, and ask for a reviewer to merge it.
 
 Please read `Contributing.md` for details on our code of conduct, and the process for submitting pull requests to us.
 
