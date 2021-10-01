@@ -9,8 +9,10 @@ Please note we have a code of conduct, please follow it in all your interactions
 
 1. Ensure any install or build dependencies are removed before the end of the layer when doing a build.
 2. Update the README.md with details of changes to the interface, this includes new environment variables, exposed ports, useful file locations and container parameters.
-3. Increase the version numbers in any examples files and the README.md to the new version that this Pull Request would represent. The versioning scheme we use is [SemVer](http://semver.org/).
-4. The owner/developer will merge the Pull Request if it aligns with the practises we follow and is valid. One should not merge, and ask for a reviewer to merge it.
+3. Use [Gitmoji](https://gitmoji.dev/) for your commits.
+4. Increase the version numbers in any examples files and the README.md to the new version that this Pull Request would represent. The versioning scheme we use is [SemVer](http://semver.org/).
+5. Create a PR from your forked repository feature branch to master of the main repository.
+6. The owner/developer will merge the Pull Request if it aligns with the practises we follow and is valid. One should not merge, and ask for a reviewer to merge it.
 
 ## Code of Conduct
 
