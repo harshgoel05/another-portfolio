@@ -39,7 +39,7 @@ export default function RepoDetails(): JSX.Element {
                 <Tilt className="Tilt" options={{ max: 25 }}>
                   <div className="bg-violet p-10 rounded-3xl shadow-violet-5xl">
                     <p className="text-5xl mb-6 font-bold">{repoData.name}</p>
-                    <p>{repoData.description}</p>
+                    <p className="break-words">{repoData.description}</p>
                     <div className="flex justify-evenly items-center mt-10 mb-5">
                       <div className="flex justify-center items-center">
                         <img src="/images/icons/warning.svg" alt="warning" className="h-6" />

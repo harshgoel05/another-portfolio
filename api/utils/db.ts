@@ -7,6 +7,8 @@ export async function initDbClient(): Promise<MongoClient> {
     useUnifiedTopology: true,
     ignoreUndefined: true
   });
+
+  // eslint-disable-next-line no-console
   console.log('✔️   Connected to Database');
   return dbClient;
 }
