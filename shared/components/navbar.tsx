@@ -29,7 +29,7 @@ const NavItem = ({ href, title }: Props): JSX.Element => {
             alt="nav-active"
             className={`
             hidden 
-            ${router.pathname === href && 'md:block md:w-100'}
+            ${router.asPath === href && 'md:block md:w-100'}
             `}
           />
         </li>
