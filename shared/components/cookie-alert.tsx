@@ -1,22 +1,31 @@
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 
 export default function CookieAlert(): JSX.Element {
   const [isOpen, setIsOpen] = useState<boolean>(true);
-  const handleAcceptCookies = (): void => {};
-  const handleCloseAlert = (): void => {
-    setIsOpen(!isOpen);
+  const handleAcceptCookies = (): void => {
+    setIsOpen(false);
   };
-  return isOpen ? (
-    <div
+  const handleCloseAlert = (): void => {
+    setIsOpen(false);
+  };
+  return (
+    <motion.div
       className={`fixed
                   bottom-0 md:bottom-5
                   right-0 md:right-5
                   font-regular
-                  max-w-sm
+                  w-100 md:max-w-sm
                   p-3
                   bg-pink
                   text-blue
-                `}>
+                `}
+      initial={{ y: '150%' }}
+      animate={{
+        y: isOpen ? 0 : '150%',
+        transitionEnd: { display: isOpen ? 'block' : 'none' }
+      }}
+      transition={{ delay: 1, duration: 0.5 }}>
       <button
         type="button"
         className={`absolute top-2 right-2
@@ -42,13 +51,14 @@ export default function CookieAlert(): JSX.Element {
           className={`px-6 py-2
                       bg-blue text-pink
                       border-2 border-blue rounded
-                      hover:bg-transparent hover:text-blue focus:outline-none
+                      hover:bg-transparent hover:text-blue
+                      focus:outline-none
                     `}
           type="button"
           onClick={handleAcceptCookies}>
           Accept
         </button>
       </div>
-    </div>
-  ) : null;
+    </motion.div>
+  );
 }
