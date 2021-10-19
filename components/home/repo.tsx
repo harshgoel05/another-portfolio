@@ -18,7 +18,7 @@ export default function RepoDetails(): JSX.Element {
             {/* Hero Header */}
             <div className="items-center w-3/4">
               <HeaderSmall text="Loved this website?" />
-              <h1 className="w-4/5 mb-3 mt-1 text-7xl sm:text-5xl md:text-7xl lg:text-5xl font-normal tracking-wide text-white leading-normal">
+              <h1 className="sm:w-4/5 mb-3 mt-1 text-7xl sm:text-5xl md:text-7xl lg:text-5xl font-normal tracking-wide text-white leading-normal lg:leading-7">
                 Loved this portfolio? Make this <span className="text-pink">yours</span> by forking.
                 {/* Gender specific????? */}
               </h1>
