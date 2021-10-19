@@ -1,13 +1,10 @@
 /* eslint-disable no-console */
 /* eslint-disable react/no-danger */
-import { AppProps } from 'next/dist/next-server/lib/router/router';
+import { AppProps } from 'next/app';
 import '../styles/global.css';
 import Head from 'next/head';
-// import Router from 'next/router';
-// import { useEffect } from 'react';
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-// import CustomCursor from 'shared/cursor';
 import Loader from '../shared/components/loader';
 import CookieAlert from '../shared/components/cookie-alert';
 
@@ -16,19 +13,6 @@ function MyApp({ Component, pageProps, router }: AppProps): JSX.Element {
 
   useEffect(() => {
     setLoading(false);
-    // const handleStart = (url) => url !== Router.asPath && setLoading(true);
-    // const handleComplete = (url) => {
-    //   if (url !== Router.asPath) setLoading(false);
-    //   // window.scrollTo(0, 0);
-    // };
-    // Router.events.on('routeChangeStart', handleStart);
-    // Router.events.on('routeChangeComplete', handleComplete);
-    // Router.events.on('routeChangeError', handleComplete);
-    // return () => {
-    //   Router.events.off('routeChangeStart', handleStart);
-    //   Router.events.off('routeChangeComplete', handleComplete);
-    //   Router.events.off('routeChangeError', handleComplete);
-    // };
   });
   const spring = {
     type: 'spring',
