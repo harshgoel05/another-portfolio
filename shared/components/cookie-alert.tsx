@@ -36,10 +36,11 @@ export default function CookieAlert(): JSX.Element {
     <motion.div
       key="cookieAlertComponent"
       className={`fixed
-                  bottom-0 md:bottom-5
-                  right-0 md:right-5
+                  bottom-0 sm:bottom-5
+                  right-0 sm:right-5
+                  z-40
                   font-regular
-                  w-100 md:max-w-sm
+                  w-full sm:max-w-sm
                   p-3
                   bg-pink
                   text-blue
@@ -50,8 +51,10 @@ export default function CookieAlert(): JSX.Element {
         transitionEnd: { display: showAlert ? 'block' : 'none' }
       }}
       transition={{ delay: 0.8, duration: 0.5 }}>
-      <h5 className="text-lg py-2">&#x1F36A; Do you like cookies?</h5>
-      <p className="py-2">We use cookies to ensure you get the best experience on our website.</p>
+      <h4 className="text-xl py-2">&#x1F36A; Do you like cookies?</h4>
+      <p className="text-base py-2">
+        We use cookies to ensure you get the best experience on our website.
+      </p>
       <div className="flex justify-between mt-2.5">
         <button
           type="button"
