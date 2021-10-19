@@ -11,7 +11,7 @@ export default function Contact(): JSX.Element {
             {/* Hero Header */}
             <div className="items-center w-3/4 relative">
               <HeaderSmall text="Meet and Greet!" />
-              <h1 className="w-4/5 mb-3 mt-1 text-7xl sm:text-5xl md:text-7xl lg:text-5xl font-normal tracking-wide text-white leading-normal">
+              <h1 className="sm:w-4/5 mb-3 mt-1 text-7xl sm:text-5xl md:text-7xl lg:text-5xl font-normal tracking-wide text-white leading-normal lg:leading-7">
                 Impressed Already? <span className="text-pink">Schedule</span> a call with him.
                 {/* Gender specific????? */}
               </h1>

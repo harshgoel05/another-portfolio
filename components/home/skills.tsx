@@ -22,7 +22,7 @@ export default function Skills(): JSX.Element {
             {/* Hero Header */}
             <div className="items-center w-3/4 relative">
               <HeaderSmall text="What does he do?" />
-              <h1 className="w-4/5 mb-3 mt-1 text-7xl sm:text-5xl md:text-7xl lg:text-5xl font-normal tracking-wide text-white leading-normal">
+              <h1 className="sm:w-4/5 mb-3 mt-1 text-7xl sm:text-5xl md:text-7xl lg:text-5xl font-normal tracking-wide text-white leading-normal lg:leading-7">
                 He creates elegant, logical web and mobile app solutions. In his hobby time, he
                 designs.
               </h1>

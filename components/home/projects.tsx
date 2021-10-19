@@ -30,7 +30,7 @@ export default function Projects(): JSX.Element {
                 <HeaderSmall text="Let’s walk the talk!" />
                 {/* TODO Add dynamic taglines */}
 
-                <h1 className="w-4/5 mb-3 mt-1 text-7xl sm:text-5xl md:text-7xl lg:text-4xl font-normal tracking-wide text-white leading-normal">
+                <h1 className="sm:w-4/5 mb-3 mt-1 text-7xl sm:text-5xl md:text-7xl lg:text-4xl font-normal tracking-wide text-white leading-normal lg:leading-7">
                   Some awesome <span className="text-pink font-bold">products</span> for the awesome
                   poeple
                 </h1>
