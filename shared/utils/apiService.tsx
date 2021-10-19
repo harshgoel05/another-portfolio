@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { Company, PersonalDetails, Project } from './types';
 
-export const BASE_URL = `${process.env.BASE_URL}/api` || '/api';
+export const BASE_URL = `${process.env.BASE_URL}/api` || 'https://harshgoel.me';
 
 export async function getPersonalDetails(): Promise<PersonalDetails | boolean> {
   try {
