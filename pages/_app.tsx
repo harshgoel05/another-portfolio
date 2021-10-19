@@ -9,6 +9,7 @@ import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 // import CustomCursor from 'shared/cursor';
 import Loader from '../shared/components/loader';
+import CookieAlert from '../shared/components/cookie-alert';
 
 function MyApp({ Component, pageProps, router }: AppProps): JSX.Element {
   const [loading, setLoading] = useState(true);
@@ -171,6 +172,7 @@ function MyApp({ Component, pageProps, router }: AppProps): JSX.Element {
               <Component {...pageProps} key={router.pathname} />
             </motion.div>
           </div>
+          <CookieAlert />
         </AnimatePresence>
       )}
       {disableConsole()}
