@@ -33,7 +33,7 @@ export default function Landing(): JSX.Element {
               </h1>
             </div>
           </div>
-          <div className="col-span-12 md:col-span-5 lg:col-span-6 grid grid-cols-3 gap-4 lg:gap-14 my-10 sm:mt-0">
+          <div className="col-span-12 md:col-span-5 lg:col-span-6 grid grid-cols-3 gap-4 lg:gap-14 my-10 sm:mt-0 items-center">
             {companyDetails.map(
               (company: Company, index): JSX.Element =>
                 company.logo_url && (
