@@ -47,23 +47,21 @@ export default function Details({ project }: Props): JSX.Element {
             What <span className="text-pink">Technologies</span> are used?
           </h1>
           <div className="flex flex-col sm:flex-row justify-center items-center text-center">
-            {project.tags.map(
-              (t): JSX.Element => {
-                const tech = technologies.find((te) => te.name === t);
-                return (
-                  tech && (
-                    <div
-                      className="flex flex-col justify-center items-center text-center my-4"
-                      key={tech.name}>
-                      <img src={tech.src} alt={tech.name} className="mb-2 h-12" />
-                      <p className="text-violet lg:px-20 text-xl" key={t}>
-                        {tech && tech.name}
-                      </p>
-                    </div>
-                  )
-                );
-              }
-            )}
+            {project.tags.map((t): JSX.Element => {
+              const tech = technologies.find((te) => te.name === t);
+              return (
+                tech && (
+                  <div
+                    className="flex flex-col justify-center items-center text-center my-4"
+                    key={tech.name}>
+                    <img src={tech.src} alt={tech.name} className="mb-2 h-12" />
+                    <p className="text-violet lg:px-20 text-xl" key={t}>
+                      {tech && tech.name}
+                    </p>
+                  </div>
+                )
+              );
+            })}
           </div>
         </div>
       )}
