@@ -54,11 +54,11 @@ function MyApp({ Component, pageProps, router }: AppProps): JSX.Element {
         <meta name="title" content="Harsh Goel | Software Developer" />
         <meta
           name="description"
-          content="Harsh Goel is a Software Developer from Dhanbad, Jharkhand. Harsh is pursuing his undergraduate from SRM University, Chennai."
+          content="Harsh is a full stack developer who crafts beautiful web-apps, chrome extensions and apps."
         />
         <meta
           name="keywords"
-          content="Harsh Goel, Software Developer , Web Development Freelancer, SRM University, Web Developer"
+          content="Harsh is a full stack developer who crafts beautiful web-apps, chrome extensions and apps."
         />
         <meta name="robots" content="index, follow" />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
@@ -74,7 +74,7 @@ function MyApp({ Component, pageProps, router }: AppProps): JSX.Element {
         <meta property="og:title" content="Harsh Goel | Software Developer" />
         <meta
           property="og:description"
-          content="Harsh Goel is a Software Developer from Dhanbad, Jharkhand. Harsh is pursuing his undergraduate from SRM University, Chennai."
+          content="Harsh is a full stack developer who crafts beautiful web-apps, chrome extensions and apps."
         />
         <meta
           property="og:image"
@@ -88,7 +88,7 @@ function MyApp({ Component, pageProps, router }: AppProps): JSX.Element {
         <meta property="twitter:title" content="Harsh Goel | Software Developer" />
         <meta
           property="twitter:description"
-          content="Harsh Goel is a Software Developer from Dhanbad, Jharkhand. Harsh is pursuing his undergraduate from SRM University, Chennai."
+          content="Harsh is a full stack developer who crafts beautiful web-apps, chrome extensions and apps."
         />
         {/* Use Billboard to get an OG Image */}
         <meta
@@ -113,20 +113,6 @@ function MyApp({ Component, pageProps, router }: AppProps): JSX.Element {
               gtag('config', 'G-2595CLJE11');`
           }}
         />
-        {/* <script>
-          dangerouslySetInnerHTML=
-          {{
-            __html: `(function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:2472275,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`
-          }}
-        </script> */}
-
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(h,o,t,j,a,r){
@@ -152,7 +138,6 @@ function MyApp({ Component, pageProps, router }: AppProps): JSX.Element {
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: -300, opacity: 0 }}
               id="page-transition-container">
-              {/* <CustomCursor /> */}
               <Component {...pageProps} key={router.pathname} />
             </motion.div>
           </div>
