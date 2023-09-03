@@ -3,6 +3,7 @@ import { PersonalDetailsContext } from '@utils/contexts';
 import { PersonalDetails } from '@utils/types';
 import { Footer, Loader, Navbar } from '@shared-components';
 import dynamic from 'next/dynamic';
+import Head from 'next/head';
 
 type Props = {
   personalDetails: PersonalDetails;
@@ -16,6 +17,10 @@ const ConnectPage = dynamic(() => import('../components/connect/index'), {
 const Contact = ({ personalDetails }: Props): JSX.Element => {
   return (
     <>
+      <Head>
+        <title>Harsh Goel | Contact</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <PersonalDetailsContext.Provider value={personalDetails}>
         <Navbar />
         <ConnectPage />

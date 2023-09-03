@@ -3,6 +3,7 @@ import { getPersonalDetails, getProjectDetails } from '@utils/apiService';
 import { PersonalDetailsContext, ProjectDetailsContext } from '@utils/contexts';
 import { PersonalDetails, Project } from '@utils/types';
 import { Footer, Loader, Navbar, SocialBar } from '@shared-components';
+import Head from 'next/head';
 
 const ProjectsPage = dynamic(() => import('../components/projects/index'), {
   ssr: false,
@@ -16,6 +17,10 @@ type Props = {
 const Projects = ({ personalDetails, projectDetails }: Props): JSX.Element => {
   return (
     <>
+      <Head>
+        <title>Harsh Goel | Projects</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <PersonalDetailsContext.Provider value={personalDetails}>
         <ProjectDetailsContext.Provider value={projectDetails}>
           <Navbar />
